@@ -1,6 +1,6 @@
-module github.com/growmpage/growmpage
+module github.com/growmpage
 
-go 1.20
+go 1.22
 
 require (
 	github.com/smarthome-go/rpirf v1.0.0
