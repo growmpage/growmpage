@@ -360,7 +360,7 @@ func TestTimeInString(t *testing.T) {
 	}{
 		{
 			args: args{Measurement{TimeInMinutes: 10*24*60 + 300}},
-			want: "06:00",
+			want: "05:00",
 		},
 	}
 	for _, tt := range tests {

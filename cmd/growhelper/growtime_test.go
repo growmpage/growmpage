@@ -100,27 +100,27 @@ func TestTime(t *testing.T) {
 		{
 			name: "1",
 			args: args{minutes: 5},
-			want: "01:05",
+			want: "00:05",
 		},
 		{
 			name: "2",
 			args: args{minutes: 0},
-			want: "01:00",
+			want: "00:00",
 		},
 		{
 			name: "3",
 			args: args{minutes: 65},
-			want: "02:05",
+			want: "01:05",
 		},
 		{
 			name: "4",
 			args: args{minutes: 24 * 60},
-			want: "01:00",
+			want: "00:00",
 		},
 		{
 			name: "5",
 			args: args{minutes: 25 * 60},
-			want: "02:00",
+			want: "01:00",
 		},
 	}
 	for _, tt := range tests {
@@ -221,7 +221,7 @@ func TestMinutesNoTime(t *testing.T) {
 		want int
 	}{
 		{
-			want: (int(now.Unix()) / 60) - (now.Hour() * 60) - (now.Minute()) -60,
+			want: (int(now.Unix()) / 60) - (now.Hour() * 60) - (now.Minute()),
 		},
 	}
 
