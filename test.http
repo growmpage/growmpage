@@ -1,0 +1,17 @@
+@rootUrl=http://growmpage:8080
+
+POST {{rootUrl}}/GROWTABLEREPORT
+Content-Type: application/text
+
+3
+
+
+### 
+GET {{rootUrl}}/PICTURE
+### 
+GET {{rootUrl}}/MEASURE
+### 
+GET {{rootUrl}}/SIM
+### 
+GET {{rootUrl}}/data/growtable.json
+

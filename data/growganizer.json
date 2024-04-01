@@ -1,0 +1,3840 @@
+{
+ "Version": "v1.0.0",
+ "ActiveWeekIndex": 0,
+ "PlugControls": [
+  {
+   "Name": "SimOnC",
+   "Code": 5201,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "SimOffC",
+   "Code": 5204,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "RotatorOnB",
+   "Code": 4433,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "RotatorOffB",
+   "Code": 4436,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "LightOnA",
+   "Code": 1361,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "LightOffA",
+   "Code": 1364,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "DoorOpen",
+   "Code": 5,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  },
+  {
+   "Name": "DoorClose",
+   "Code": 5,
+   "PinNumberReceive": 27,
+   "PinNumberSend": 17,
+   "ProtocolIndex": 1,
+   "Repeat": 10,
+   "PulseLength": 307,
+   "Length": 24
+  }
+ ],
+ "Weeks": [
+  {
+   "Name": "Free",
+   "Start": "2024-02-22",
+   "Temperature": 25,
+   "Humidity": 70,
+   "EC": 0.9,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "bla",
+   "Todo": "bla bla",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Testweek",
+   "Start": "2024-02-22",
+   "Temperature": 25,
+   "Humidity": 70,
+   "EC": 0.9,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "Succesfull tested my growbox with all controls for a week",
+   "Todo": "Read the this README and have fun to grow. Clean everything, also yourself every time before touching anything! Calibrate EC+PH device.\r\n\r\n+++Sativa like Amnesia Haze and Sour Diesel+++\r\n\r\nIf your room temperature will rise above 23°C in the next 3 months, turn on the light at night during flower-time or let the air tubes access fresh air and shut off any heater near by.\r\nThe optimal temperatures listed in the Groworganizer is meant for light-time, during night it should be about 5°C colder.\r\n\r\nAlways water if soil dried out (Finger in 5cm depth should feel dry).\r\nPH always 6,1. (increase: PH-Upper || decrease: PH-Downer).\r\nEC: see Groworganizer (increase: normal water or dung || decrease: dest. water).\r\nHumidity: (increase: wet paper towels or humidifier or low temperature in the growbox || decrease: high temperature or Rotator).\r\n\r\nKeep Carbon Filter System always running, play with the rotary switches to handle temperature and vacuum (for the smell).\r\nIf you have different seeds, keep in mind to label them from the beginning!\r\n\r\nThe rotator can always run.\r\n\r\nMore Information on: \r\nhttps://www.zamnesia.com/de/cannabisanbauanleitung\r\nor \r\nhttps://www.leafly.com/news/growing",
+   "Growcontrols": [
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 28
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 30
+     },
+     "Condition": {
+      "Value": "Humidity",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 45
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 30
+     },
+     "Condition": {
+      "Value": "Humidity",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 44
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Seeds",
+   "Start": "",
+   "Temperature": 20,
+   "Humidity": 70,
+   "EC": 0.9,
+   "Dung": "No Dung!",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "First leaf",
+   "Todo": "Make a paper towel wet, wring it out and put it on top of a pot saucer. Put your 5 seeds on it (never touch with hands), another paper towel on top, another pot saucer on top so it builds a little room for air. You can put this in the growbox without any lights, the seeds like darkness and temperatures between 20 and 30 Celcius, make them wet morning/evening if necessary for about 3 days.\r\nPut every soil block in a glas of water, after 5 minutes empty the glas, grab a little hole about 2cm, take the shell of a seed and put the roots down into the soil, some soil over it, no pressure.",
+   "Growcontrols": [
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "08:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 25
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Light",
+   "Start": "",
+   "Temperature": 22,
+   "Humidity": 70,
+   "EC": 0.9,
+   "Dung": "No Dung!",
+   "LightMode": "W",
+   "LightHours": 18,
+   "Done": "",
+   "Todo": "Put the light about 30cm above the plants",
+   "Growcontrols": [
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 10
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "17:40",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 19
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 28
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Leaves",
+   "Start": "",
+   "Temperature": 22,
+   "Humidity": 70,
+   "EC": 0.9,
+   "Dung": "No Dung!",
+   "LightMode": "W",
+   "LightHours": 18,
+   "Done": "The 2-3 leafs fill out the glas and you can see the white roots.",
+   "Todo": "",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 19
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 28
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Airpot",
+   "Start": "",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 0.9,
+   "Dung": "No Dung!",
+   "LightMode": "W",
+   "LightHours": 18,
+   "Done": "",
+   "Todo": "Prepare an Airpot with soil and a bigger whole, remove the web from the soil block (if you have one) and put the plant into the Airpot, water them from above.\r\nYou can water two times a day or every 3 days, overwatering is not possible with Airpots.",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Little Dung",
+   "Start": "",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 1,
+   "Dung": "Terra Vega 1ml/10L",
+   "LightMode": "W",
+   "LightHours": 18,
+   "Done": "a week after toping",
+   "Todo": "Add a little dung.\r\nKeep a fan right on the plants.\r\nTop like here: https://www.growweedeasy.com/wp-content/uploads/2013/05/5th-set-leaves-plucked-here.jpg",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 80
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Autopot",
+   "Start": "",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 1,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V",
+   "LightHours": 18,
+   "Done": "",
+   "Todo": "Install Autopot system (Clean all, black matt and 5cm clay pebbles on the ground).\r\nDismantle Airpot, put the plants in Autopot, water also from above the first time.\r\n",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 75
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Spike",
+   "Start": "",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 1,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V",
+   "LightHours": 18,
+   "Done": "Plants have a height of 20cm.",
+   "Todo": "Put light every day nearer until burning signs appear.\r\n\r\nCreate 4 U-shaped spikes (eg. clothes hanger) like this: https://www.growweedeasy.com/wp-content/uploads/2013/05/u-shaped-spikes-made-of-clothes-hangers-sm.jpg\r\n\r\nGently fold down the 4 mains and spike it to soil like here: https://www.growweedeasy.com/wp-content/uploads/2013/05/4-hanger-sites-placement-sm.jpg",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "07:00",
+      "End": "01:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "07:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "01:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 75
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Net",
+   "Start": "",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 1,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V",
+   "LightHours": 15,
+   "Done": "Plants fill out 75% of screen or have a height of 30cm.",
+   "Todo": "Place net 20cm above soil.\r\nFold branches out and away from the main stem, like a flower opening up or peeling a banana.\r\nIf branch is more than 5cm above net, tuck like here: https://www.youtube.com/watch?v=ceLFSWwV3Zc",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "08:00",
+      "End": "23:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "08:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "23:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 75
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-1.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 50,
+   "EC": 1.2,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Look for males, install a wood stock for later stability if not using a net.\r\nCalibrate EC+PH device.\r\nUntil A Few Weeks into the Flowering Stage, Use Tucking to Keep Plants Growing Horizontally Under the Screen if Bigger5cm above net.",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 40
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-2.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 50,
+   "EC": 1.4,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Keep tucking",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 40
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 64
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-3.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 1.5,
+   "Dung": "Terra Vega 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "SCROG: Tucking and prune everything under net (Lollipoping)",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 63
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-4.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 1.6,
+   "Dung": "Terra Flower 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Flower Dung!\r\n\r\nIf not SCROG: Manicure first 20cm like here:\r\nhttps://www.leafly.com/news/growing?jwsource=cl",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-5.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 1.8,
+   "Dung": "Terra Flower 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Stop Tucking, just let gain height.",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-6.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 1.9,
+   "Dung": "Terra Flower 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-7.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 1.9,
+   "Dung": "Terra Flower 1ml/L",
+   "LightMode": "W+V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-8.W",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Empty AutoPot reservoir with tube, because we will water from above next week.",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-9.W-flush",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 0,
+   "Dung": "Dest. water",
+   "LightMode": "V+B",
+   "LightHours": 12,
+   "Done": "",
+   "Todo": "Water from above with dest. water (PH checked) ",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Flower-10.W-flush",
+   "Start": "",
+   "Temperature": 23,
+   "Humidity": 40,
+   "EC": 0,
+   "Dung": "Dest. water",
+   "LightMode": "V+B",
+   "LightHours": 12,
+   "Done": "10% Bernstein",
+   "Todo": "Water from above with dest. water (PH checked) ",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "10:00",
+      "End": "22:00",
+      "EveryMinutes": 90
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "10:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "22:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 30
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Cut off",
+   "Start": "",
+   "Temperature": 20,
+   "Humidity": 50,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "",
+   "Todo": "Do not Water and do not turn light on for 24-72 hours, then cut off like described here:\r\nhttps://www.leafly.com/news/growing?jwsource=cl\r\n\r\nCut above soil and turn arround the whole net to dry upside down.\r\nRemove only unsticky leafs, all to trash.\r\nWithout net, heng the plants one by one with a thread upside down in the box.\r\n",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 40
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Finish Dry",
+   "Start": "",
+   "Temperature": 20,
+   "Humidity": 50,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "Cannabis is dry.",
+   "Todo": "Depend e.g. on how hot it was last week",
+   "Growcontrols": [
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 60
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 0,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 15
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 26
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 40
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 60
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 2
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOffB",
+     "Time": {
+      "Start": "00:00",
+      "End": "",
+      "EveryMinutes": 4
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Glas-1W",
+   "Start": "",
+   "Temperature": 21,
+   "Humidity": 60,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "one week dried in glas",
+   "Todo": "Now we get the rest of humidity out by putting the weed into the glas like described here:\r\nhttps://video.leafly.com/m/8lERu5w9/how-to-harvest-your-cannabis-plant-homegrown-episode-105?list=4hMlB0O8\r\n\r\nWith the leafes make a tincture like described here:\r\nhttps://www.zamnesia.com/de/blog-stell-deine-eigene-cannabis-tinktur-her-n115\r\n(activate THC by 30min in 115°C, alcohol, freezer)\r\n\r\n1L Glas holds about 30g weed and should only be filled 2/3, put your hygrometer device into one to control temperature and humidity, open two times daily for about 30 minutes.",
+   "Growcontrols": [
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Glas-2W",
+   "Start": "",
+   "Temperature": 21,
+   "Humidity": 60,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "",
+   "Todo": "If temperature was under 25 last week, keep on opening at least once/day. Put the tincture through a filter, it's ready to try.",
+   "Growcontrols": [
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:30",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Enjoy",
+   "Start": "",
+   "Temperature": 15,
+   "Humidity": 0,
+   "EC": 0,
+   "Dung": "",
+   "LightMode": "",
+   "LightHours": 0,
+   "Done": "",
+   "Todo": "Harden the weed by filling up the glas completely to remove air and put a humidity pack into the glasses, you are done, start a new grow (some only smoke one-year old weed).\r\nBut your weed is ready to smoke and gets smoother every week.",
+   "Growcontrols": []
+  }
+ ],
+ "Alerts": []
+}

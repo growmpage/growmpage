@@ -1,0 +1,12 @@
+github.com/jonboulle/clockwork v0.4.0 h1:p4Cf1aMWXnXAUh8lVfewRBx1zaTSYKrKMF2g3ST4RZ4=
+github.com/jonboulle/clockwork v0.4.0/go.mod h1:xgRqUGwRcjKCO1vbZUEtSLrqKoPSsUpK7fnezOII0kc=
+github.com/smarthome-go/rpirf v1.0.0 h1:59OWQIzSeQxCcUdiHFN495B0Kczy6m9GKvvP84LfbEE=
+github.com/smarthome-go/rpirf v1.0.0/go.mod h1:zEUZBBFSJvixVQ8ui8BqVsnpzxa6Vv4H44ryQNrHKfo=
+github.com/stianeikeland/go-rpio/v4 v4.6.0 h1:eAJgtw3jTtvn/CqwbC82ntcS+dtzUTgo5qlZKe677EY=
+github.com/stianeikeland/go-rpio/v4 v4.6.0/go.mod h1:A3GvHxC1Om5zaId+HqB3HKqx4K/AqeckxB7qRjxMK7o=
+periph.io/x/conn/v3 v3.7.0 h1:f1EXLn4pkf7AEWwkol2gilCNZ0ElY+bxS4WE2PQXfrA=
+periph.io/x/conn/v3 v3.7.0/go.mod h1:ypY7UVxgDbP9PJGwFSVelRRagxyXYfttVh7hJZUHEhg=
+periph.io/x/devices/v3 v3.7.1 h1:BsExlfYJlZUZoawzpMF7ksgC9f1eBAdqvKRCGvb+VYw=
+periph.io/x/devices/v3 v3.7.1/go.mod h1:ezQOe8WknDaMbKZXVwQUQkIauyLyJshwAHkIohHXA94=
+periph.io/x/host/v3 v3.8.2 h1:ayKUDzgUCN0g8+/xM9GTkWaOBhSLVcVHGTfjAOi8OsQ=
+periph.io/x/host/v3 v3.8.2/go.mod h1:yFL76AesNHR68PboofSWYaQTKmvPXsQH2Apvp/ls/K4=

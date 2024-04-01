@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>Growmpage</title>
+	<style>
+		.alert {
+			width: 100%;
+			color: white;
+			font-size: larger;
+			background-color: firebrick;
+		}
+
+		#content {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#navigation {
+			background: white;
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+		}
+
+		#navigation>div {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			align-content: space-around;
+			justify-content: space-around;
+
+		}
+
+		#growganizer {
+			overflow-y: auto;
+			width: 100%;
+			margin-left: 10px;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.flex-container>div {
+			margin: 10px;
+		}
+
+		.todo {
+			width: 99%;
+			height: 100%;
+		}
+
+		.flex-container>div>div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		#startMovie {
+			flex-grow: 2;
+		}
+
+		.growtableEntry {
+			text-decoration: unset;
+		}
+
+		.growtableEntry>p {
+			color: white;
+			font-size: large;
+		}
+
+		#growtable {
+			text-align: center;
+			display: flex;
+			gap: 5px;
+			overflow-y: auto;
+			margin: 10px;
+			margin-right: 20px;
+		}
+
+		button:hover {
+			background-color: cornflowerblue;
+		}
+
+		.growcontrol:hover {
+			border: 2px solid white;
+		}
+
+		.growcontrol {
+			width: fit-content;
+		}
+
+		.weekRow:hover {
+			background: cornflowerblue;
+		}
+
+		.weekRow {
+			border: solid black;
+		}
+
+		@media (max-width: 800px) {
+			.weekRow {
+				display: none;
+			}
+		}
+
+		@media (min-width: 801px) {
+			#weekSelectMobile {
+				display: none;
+			}
+		}
+
+		.week {
+			display: none;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			margin: 10px;
+		}
+
+		.growcontrol button {
+			border: none;
+			color: currentcolor;
+		}
+
+		body {
+			margin: 0;
+			background: #222;
+			height: 100vh;
+		}
+
+		.link {
+			text-decoration: unset;
+			color: black;
+		}
+
+		#save {
+			border: 10px solid yellow;
+			margin: 20px;
+			display: none;
+			background-color: blueviolet;
+		}
+
+		.lightbox {
+			display: none;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 1em;
+			background: rgba(0, 0, 0, 0.395);
+		}
+
+		.lightbox span {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		input[type=number] {
+			width: 60px;
+		}
+
+		input[type=time] {
+			width: 100px;
+		}
+
+		.done {
+			width: 100%;
+			margin-bottom: 10px;
+			font-size: large;
+		}
+
+		.lightMode {
+			width: 60px;
+		}
+
+		.dung,
+		.name {
+			width: 120px;
+		}
+
+		input,
+		textarea,
+		select {
+			text-align: center;
+			background-color: #222;
+			color: white;
+			margin-left: 1px;
+			margin-right: 2px;
+
+		}
+
+		.growcontrols {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+		#counter {
+			border: solid white;
+			background-color: white;
+		}
+
+		.week>input {
+			font-size: large;
+		}
+
+
+		#navigation>#movie {
+			display: flex;
+			flex-direction: column;
+		}
+
+
+		#navigation>#weekControls {
+			margin: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		#movie>div {
+			display: flex;
+			justify-content: center;
+		}
+
+		#movie_speed {
+			width: 80%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="navigation">
+		<button id="save" onclick="save()">save &#128190;</button>
+		<button class="saveHide" onclick="route('Snapshot')">Live status</button>
+
+
+		<div id="movie">
+			<button id="startMovie" onclick="showMovie()">Show Movie</button>
+			<div>
+				<span>last </span>
+				<input id="movie_days" value="1" min="1" max="9999" type="number">
+				<span> days</span>
+			</div>
+			<div>
+				<span>speed: </span>
+				<input id="movie_speed" style="width: 80%;" value="1" min="1" max="10" type="range">
+			</div>
+		</div>
+		<hr>
+		<hr>
+		<button id="counter">Day-Counter:
+			<strong>{{.GetDaysSinceActiveStartDate}}</strong> </button>
+
+		<div>
+			{{ $ActiveWeekIndex := .ActiveWeekIndex }}
+			{{range $index, $week := .Weeks}}
+			<div class="weekRow" onclick="showWeek({{$index}})">
+				<a {{if eq $index $ActiveWeekIndex }} style="color: green;" {{end}} class="link" href="#{{$index}}"
+					id="w-{{$index}}">{{$week.Name}}</a>
+			</div>
+			{{end}}
+			<select id="weekSelectMobile" onchange="showWeek(this.selectedIndex)">
+				{{range $index, $week := .Weeks}}
+				<option {{if eq $index $ActiveWeekIndex }} style="color: green;" selected {{end}} value="">
+					{{$week.Name}}</option>
+				{{end}}
+			</select>
+
+
+
+		</div>
+
+		<div id="weekControls">
+			<button class="saveHide" onclick="update('ActivateWeek')">Activate</button>
+			<button title="Duplicate/Copy selected Week" class="saveHide" onclick="update('AddWeek')">Duplicate</button>
+			<button title="Delete selected Week" class="saveHide" onclick="update('DeleteWeek')">Remove</button>
+		</div>
+
+		<hr>
+		<hr>
+		<button title="Database edit & share, calibrate plugs" class="saveHide"
+			onclick="route('/html/expert.html')">Database
+			& Plugs</button>
+	</div>
+
+	<div id="content">
+
+		<div id="growtable">
+			{{ $lastDay := 0 }}
+			{{range .Measurements}}
+			{{if ne .TimeInDays $lastDay}}
+			{{if ne $lastDay 0 }}
+			<hr>
+			{{end}}
+			{{ $lastDay = .TimeInDays }}
+			{{end}}
+			<a class="growtableEntry" title="{{.DateInString}}" {{if .Picture}} id="entry-{{.TimeInMinutes}}"
+				onmouseenter="hoverGrowtable(this)" href="#{{.TimeInMinutes}}"
+				onclick="fullscreen('{{.TimeInMinutes}}')" {{end}}>
+				<p>{{.TimeInString}}</p>
+				{{if .Temperature}}
+				<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.TemperatureDeviation}},100%,50%);">
+					{{.Temperature}}°C
+				</p>
+				{{end}}
+				{{if .Humidity}}
+				<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.HumidityDeviation}},100%,50%);">
+					{{.Humidity}}%
+				</p>
+				{{end}}
+				{{if .Picture}}
+				<img src='/data/camera/{{.TimeInMinutes}}.png' width="40px">
+				{{end}}
+			</a>
+			{{end}}
+
+			<hr>
+			{{ range .GetDummyGrowtableEntrys }}
+			<a class="growtableEntry">
+				<p style="color: #222;">00:00</p>
+			</a>
+			{{ end }}
+		</div>
+
+		<div id="growganizer">
+			{{ range .Alerts }}
+			<button onmouseenter="color(this,'black')" onmouseleave="color(this,'white');" onclick="deleteAlert(this)"
+				class="alert">{{.}}</button>
+			{{end}}
+
+			<form name="form" method="POST" action="/Update">
+				<input hidden type="text" name="control">
+				<input hidden type="number" name="selectedWeekIndex" value="{{.ActiveWeekIndex}}">
+				<input hidden type="number" name="growcontrolIndex">
+				{{$actions := .GetActions}}
+				{{$anyCondition := .GetAnyConditionString}}
+				{{range $index, $week := .Weeks}}
+				<div class="week">
+					<!-- TODO: replace {{$index}} with form array -->
+					<textarea onchange="changed(this)" class="done" name="Done-{{$index}}" title="Done"
+						rows="1">{{$week.Done}}</textarea>
+					<div>
+						<input onchange="changed(this)" name="Name-{{$index}}" class="name" title="Week-Name"
+							type="text" size="12" value="{{$week.Name}}">
+						<input onchange="changed(this)" name="Start-{{$index}}" title="Week-Start" type="datetime"
+							value="{{$week.Start}}">
+					</div>
+					<div>
+						<input onchange="changed(this)" name="Temperature-{{$index}}" title="Temperature" type="number"
+							max="50" min="0" value="{{$week.Temperature}}">🔥
+						<input onchange="changed(this)" name="Humidity-{{$index}}" title="Humidity" type="number"
+							min="0" max="100" value="{{$week.Humidity}}">
+					</div>
+					<div>
+						<input onchange="changed(this)" name="EC-{{$index}}" title="EC" type="number" min="0" max="5"
+							step="0.1" value="{{$week.EC}}">🍹
+						<input onchange="changed(this)" name="Dung-{{$index}}" class="dung" title="Dung" type="text"
+							size="14" value="{{$week.Dung}}">
+					</div>
+					<div>
+						<input onchange="changed(this)" name="LightMode-{{$index}}" class="lightMode" title="LightMode"
+							type="text" size="6" value="{{$week.LightMode}}">🌞
+						<input onchange="changed(this)" name="LightHours-{{$index}}" title="LightHours" type="number"
+							min="0" max="24" value="{{$week.LightHours}}">
+					</div>
+
+					<div class="flex-container">
+						<div class="flex-child">
+							<textarea onchange="changed(this)" class="todo" name="Todo-{{$index}}" rows="8"
+								title="Todo">{{$week.Todo}}</textarea>
+						</div>
+						<div class="growcontrols flex-child">
+							{{range $growcontrolIndex, $growcontrol := .Growcontrols}}
+
+							<div class="growcontrol growcontrol_index_'{{$growcontrolIndex}}'">
+								<button onclick="updateGrowcontrol('DeleteGrowcontrol', '{{$growcontrolIndex}}')"
+									title="Delete" class="saveHide">-</button>
+								<select onchange="changed(this);" name="Action-{{$index}}-{{$growcontrolIndex}}"
+									title="Action">
+									{{range $actions}}
+									<option {{if eq . $growcontrol.Action}} selected {{end}} value="{{.}}">{{.}}
+									</option>
+									{{end}}
+								</select>
+								<input onchange="changed(this);" name="EveryMinutes-{{$index}}-{{$growcontrolIndex}}"
+									title="EveryMinutes" type="number" max="1440"
+									value="{{ or $growcontrol.Time.EveryMinutes "" }}">
+								<input onchange="changed(this);" name="Start-{{$index}}-{{$growcontrolIndex}}"
+									title="Start" type="time" value="{{$growcontrol.Time.Start}}">
+								<div style="background-color: #222;color: white;margin: 0px 10px 0px 10px;"> until
+								</div>
+								<input onchange="changed(this);" name="End-{{$index}}-{{$growcontrolIndex}}" title="End"
+									type="time" value="{{$growcontrol.Time.End}}">
+								<select onchange="changed(this);" title="Condition"
+									name="Value-{{$index}}-{{$growcontrolIndex}}">
+									{{range $growcontrol.GetValues}}
+									<option {{if eq . $growcontrol.Condition.Value}} selected {{end}} value="{{.}}">
+										{{.}}
+									</option>
+									{{end}}
+								</select>
+								<input onchange="changed(this);" title="SinceHours"
+									name="SinceHours-{{$index}}-{{$growcontrolIndex}}" type="number" min="0" max="24"
+									value="{{ or $growcontrol.Condition.SinceHours "" }}">
+								<select onchange="changed(this);" name="ComparisonSign-{{$index}}-{{$growcontrolIndex}}"
+									title="ComparisonSign">
+									<option value=""></option>
+									{{range $growcontrol.GetComparisonSigns}}
+									<option {{if eq . $growcontrol.Condition.ComparisonSign}} selected {{end}}
+										value="{{.}}">
+										{{.}}
+									</option>
+									{{end}}
+									<input onchange="changed(this);" name="ComparedTo-{{$index}}-{{$growcontrolIndex}}"
+										title="ComparedToValue" type="number" min="0" max="100"
+										value="{{ or $growcontrol.Condition.ComparedTo "" }}">
+									<button onclick="updateGrowcontrol('AddGrowcontrol', '{{$growcontrolIndex}}')"
+										title="Duplicate" class="saveHide">+</button>
+							</div>
+							{{end}}
+						</div>
+					</div>
+				</div>
+				{{end}}
+			</form>
+		</div>
+	</div>
+
+	
+	<script>
+
+		var images;
+		var lastImageId = 0;
+		window.addEventListener("load", (event) => {
+			images = Array.from(document.getElementsByClassName('lightbox'));
+			if (images.length > 0) {
+				lastImageId = images[0].id
+			}
+			if (document.URL.split('?snapshot=').length == 2) {
+				fullscreen(document.URL.split('?snapshot=')[1], true);
+			}
+		});
+
+		const growtable = document.getElementById("growtable");
+		var lastHoverdGrowtableEntry;
+
+		document.addEventListener("keydown", function (e) {
+			if (lastImageId == 0) {
+				return
+			}
+			// e.preventDefault();
+			//TODO: add image.next() and image.before() 
+			var beforeImage;
+			var nextImage = images[images.length - 1]
+			var loopCacheImage = images[0];
+			for (image of images) {
+				if (image.id == lastImageId) {
+					beforeImage = loopCacheImage
+				}
+				loopCacheImage = image
+
+				if (image.id < lastImageId) {
+					nextImage = image
+					break
+				}
+			}
+			const key = event.key;
+			switch (event.key) {
+				case "ArrowLeft":
+					fullscreen(beforeImage.id, true)
+					break;
+				case "ArrowRight":
+					fullscreen(nextImage.id, true)
+					break;
+				// case "ArrowUp":
+				// 	break;
+				// case "ArrowDown":
+				// 	break;
+			}
+		});
+
+
+		async function fullscreen(id, scrollTo) {
+			if (id === "" || id === null || !id > 2) {
+				return
+			}
+			// growtable.scrollTo({ behavior: 'smooth', left: document.getElementById(id).scrollLeft() })
+			var growtableElement = document.getElementById('entry-' + id)
+			if (scrollTo) {
+				growtableElement.scrollIntoView({ behavior: 'instant', inline: "start", block: "nearest" });
+				growtable.scrollLeft -= 50;
+			}
+			hoverGrowtable(growtableElement)
+
+			if (lastImageId != 0) {
+				document.getElementById(lastImageId).style.display = 'none';
+			}
+			document.getElementById(id).style.display = 'block';
+			lastImageId = id
+		}
+
+		function deleteAlert(e) {
+			fetch('DeleteAlert', { method: 'POST', body: e.innerText });
+			e.style.display = 'none';
+		}
+
+		function route(path) {
+			window.location.href = path
+		}
+
+		function save() {
+			document.getElementsByName('control')[0].value = 'Save';
+			document.forms['form'].submit();
+		}
+
+		function updateGrowcontrol(control, growcontrolIndex) {
+			document.getElementsByName('growcontrolIndex')[0].value = growcontrolIndex;
+			update(control);
+		}
+
+		function update(control, otherSelectedWeekIndex) {
+			if (otherSelectedWeekIndex !== undefined) {
+				document.getElementsByName('selectedWeekIndex')[0].value = otherSelectedWeekIndex
+			}
+			if (confirm(control + ' ?')) {
+				document.getElementsByName('control')[0].value = control;
+				document.forms['form'].submit();
+				return false;
+			}
+			return false;
+		}
+
+		function hoverGrowtable(e) {
+			if (lastHoverdGrowtableEntry == null || lastHoverdGrowtableEntry == undefined) {
+				//first hover
+			} else {
+				lastHoverdGrowtableEntry.style.background = ''
+			}
+			lastHoverdGrowtableEntry = e;
+			e.style.background = 'cornflowerblue';
+		}
+
+		function changed(e) {
+			e.style.background = 'blueviolet';
+			document.getElementById('save').style.display = 'block';
+			Array.from(document.getElementsByClassName('saveHide')).forEach(e => e.style.display = 'none');
+		}
+
+		function showWeek(index) {
+			if (!Number.isSafeInteger(index)) {
+				index = "{{ $ActiveWeekIndex }}"
+			}
+			isActivatedIndex = (index == '{{$ActiveWeekIndex}}')
+			if (isActivatedIndex) {
+				document.getElementById('counter').innerHTML = "Day-Counter: <strong>{{.GetDaysSinceActiveStartDate}}</strong>"
+			} else {
+				document.getElementById('counter').innerHTML = "Day-Counter: <strong>X</strong>"
+
+			}
+
+			weeks = document.getElementsByClassName('week');
+			links = document.getElementsByClassName('link');
+
+			if (weeks[index] == null || links[index] == null) {
+				return
+			}
+			document.getElementsByName('selectedWeekIndex')[0].value = index;
+
+			Array.from(links).forEach(el => el.style.textDecoration = "unset");
+			links[index].style.textDecoration = "underline"
+			Array.from(weeks).forEach(el => el.style.display = "none");
+			weeks[index].style.display = "flex";
+		}
+
+		async function showMovie() {
+			if (document.getElementById('startMovie').innerText === "Cancel Movie") {
+				document.getElementById('startMovie').innerText = "Show Movie"
+				return;
+			} else {
+				document.getElementById('startMovie').innerText = "Cancel Movie"
+			}
+			var nowMinutes = (new Date().getTime() / 1000 / 60);
+			var daysInMinutes = document.getElementById('movie_days').value * 24 * 60;
+			var beginMinutes = nowMinutes - daysInMinutes;
+			var waitTime = 0
+			for (image of images.toReversed()) {
+				if (image.id < beginMinutes) {
+					continue;
+				}
+				//TODO: replace lastImageId (übergreifende variable)
+
+				var timeDiffMinutes = image.id - lastImageId;
+				if (timeDiffMinutes > 123456 || timeDiffMinutes < 0) {
+					timeDiffMinutes = 1234
+				}
+				if (waitTime == 0) {
+					timeDiffMinutes = -99
+				}
+				waitTime = (timeDiffMinutes + 100) / (document.getElementById('movie_speed').value * 2)
+				await new Promise(r => setTimeout(r, waitTime));
+				fullscreen(image.id, true)
+				if (image.style.display === 'none') { //cancel on click anywhere
+					document.getElementById('startMovie').innerText = "Show Movie"
+					return;
+				}
+			}
+			document.getElementById('startMovie').innerText = "Show Movie"
+			await new Promise(r => setTimeout(r, 500));
+			if (lastImageId != 0) {
+				document.getElementById(lastImageId).style.display = 'none';
+			}
+		}
+
+		function color(e, c) {
+			e.style.color = c;
+		}
+
+		function getAnchor() {
+			return (document.URL.split('#').length > 1) ? Number(document.URL.split('#')[1]) : null;
+		}; showWeek(getAnchor());
+
+		function hide(e) {
+			e.style.display = 'none';
+		}
+
+	</script>
+
+
+	<!-- hidden images for lightbox -->
+	{{range .Measurements}}
+	{{if .Picture}}
+	<a class="lightbox" onclick="hide(this)" href="#!" id="{{.TimeInMinutes}}">
+		<span style="background-image: url('/data/camera/{{.TimeInMinutes}}.png');"></span>
+	</a>
+	{{end}}
+	{{end}}
+
+</body>
+
+</html>

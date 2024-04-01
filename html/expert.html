@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>Expert</title>
+	<style>
+		#content {
+			display: flex;
+			height: 100%;
+
+			align-items: baseline;
+
+		}
+
+		aside {
+			flex-basis: 220px;
+			background: white;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#main {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			margin-left: 10px;
+		}
+
+		#json {
+			margin: 10px;
+		}
+
+		button:hover {
+			background-color: cornflowerblue;
+		}
+
+		body {
+			margin: 0;
+			background: #222;
+			overflow: hidden;
+			height: 100vh;
+		}
+
+		#save {
+			border: 10px solid yellow;
+			margin: 20px;
+			display: none;
+			background-color: blueviolet;
+		}
+
+		textarea {
+			background-color: #222;
+			color: white;
+			height: 800px;
+		}
+
+
+		select {
+			text-align: center;
+			background-color: #222;
+			color: white;
+			margin-left: 1px;
+			margin-right: 2px;
+		}
+
+		#pretty {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<aside>
+			<button type="submit"  onclick="window.location.href = '/'">Cancel & Back</button>
+			<hr>
+			<button id="save" onclick="save()">Save</button>
+			<button class="saveHide" id="switcher" type="button" onclick="switchJson()">Show Growtable</button>
+			<button id="pretty" type="button" onclick="prettyPrint()">Pretty Print</button>
+			<hr>
+			<select class="saveHide" id="plugControlCalibrate" onchange="calibrate(this,this.selectedIndex)">
+				<option value="">Calibrate Plugcontrol</option>
+			</select>
+			<hr>
+			<select class="saveHide" id="plugControl" onchange="plugControl(this)">
+				<option value="">Test Plugcontrol</option>
+			</select>	
+			<hr>
+			<button id="version_git" onclick="gitPrivateReset()"></button>
+			<button id="version_binary" onclick="gitPublicInstall()"></button>
+			<button id="reset_binary" onclick="gitPublicUpgrade()">REINSTALL version of growganizer from github, except /data/</button>
+		</aside>
+
+		<form name="form" id="main" method="POST" action="/Update">
+			<input hidden type="text" name="control" id="control">
+			<textarea name="json" id="json" onkeydown="if(event.keyCode===9){key(this)}"
+				oninput="input(this)"></textarea>
+		</form>
+	</div>
+
+	<script>
+		const growganizerRequest = new Request("/data/growganizer.json");
+		const growtableRequest = new Request("/data/growtable.json");
+		const plugRequest = new Request("/PlugControl");
+		const calibrateRequest = new Request("/Calibrate");
+
+		const gitPrivateVersionLocalRequest = new Request("/gitPrivateVersionLocal");
+		const gitPrivateResetRequest = new Request("/gitPrivateReset");
+
+		const gitPublicVersionOriginRequest = new Request("/gitPublicVersionOrigin");
+		const gitPublicInstallRequest = new Request("/gitPublicInstall");
+
+		const gitPublicUpgradeRequest = new Request("/gitPublicUpgrade");
+		
+		var version_git = document.getElementById('version_git');
+		var version_binary = document.getElementById('version_binary');
+
+		var control = document.getElementById('control');
+		var textarea = document.getElementById('json');
+
+		var growganizer = "";
+		var growtable = "";
+		var plugList;
+
+		function setPrivateGitVersion() {
+			fetch(gitPrivateVersionLocalRequest).then(response => response.text())
+				.then(body => {
+					body = body.replace("̀", "")
+					console.log("got version: " + body);
+					version_git.innerHTML = "GIT RESET from private backup repository<div>(local git hash: " + body+")</div>";
+				})
+				.catch(console.error);
+		} setPrivateGitVersion();
+
+		function setPublicGitVersion() { //TODO: DRY
+			fetch(gitPublicVersionOriginRequest).then(response => response.text())
+				.then(body => {
+					body = body.replace("̀", "")
+					console.log("got binary version: " + body);
+					version_binary.innerHTML = "INSTALL latest version from github, except /data/.<div>(latest version: " + body+")</div>";
+				})
+				.catch(console.error);
+		} setPublicGitVersion();
+
+	        function gitPrivateReset() {
+			if (confirm("Reset whole repository on pi to latest commit of your Repository?")) {
+				 fetch(gitPrivateResetRequest).then(response => response.text())
+					.then(body => { 
+						alert(body); 
+						if (body.startsWith("updated")){
+							location.reload();
+						}
+					})
+			}
+			return false
+		}
+
+		function gitPublicInstall(){ //TODO: DRY
+			if (confirm("Reinstall my version in growganizer, from public version of https://github.com/growmpage/growmpage?")) {
+				 fetch(gitPublicInstallRequest).then(response => response.text())
+					.then(body => { 
+						alert(body); 
+						if (body.startsWith("updated")){
+							location.reload();
+						}
+					})
+			}
+			return false	
+		}
+
+		function gitPublicUpgrade(){ //TODO: DRY
+			if (confirm("Upgrade all files, but not /data, to latest public version of https://github.com/growmpage/growmpage?")) {
+				 fetch(gitPublicUpgradeRequest).then(response => response.text())
+					.then(body => { 
+						alert(body); 
+						if (body.startsWith("updated")){
+							location.reload();
+						}
+					})
+			}
+			return false	
+		}
+
+		fetch(growganizerRequest)
+			.then(response => response.json())
+			.then(json => {
+				initPlugcontrol(json.PlugControls);
+				control.value = "rawUpdateGrowganizer"
+				growganizer = JSON.stringify(json, undefined, 4)
+				textarea.value = growganizer
+				prettyPrint()
+			})
+			.catch(console.error);
+
+		fetch(growtableRequest)
+			.then(response => response.json())
+			.then(json => {
+				growtable = JSON.stringify(json, undefined, 4)
+				const urlParams = new URLSearchParams(window.location.search);
+				const showTable = urlParams.get('table')
+				if (showTable == "true") {
+					switchJson()
+				}
+			})
+			.catch(console.error);
+
+		function switchJson() {
+			if (document.getElementById("switcher").innerText === "Show Growganizer") {
+				document.getElementById("switcher").innerText = "Show Growtable"
+				document.getElementById("plugControlCalibrate").hidden = false
+				document.getElementById("plugControl").hidden = false
+				textarea.value = growganizer
+				control.value = "rawUpdateGrowganizer"
+			} else {
+				document.getElementById("switcher").innerText = "Show Growganizer"
+				document.getElementById("plugControlCalibrate").hidden = true
+				document.getElementById("plugControl").hidden = true
+				textarea.value = growtable
+				control.value = "rawUpdateGrowtable"
+			}
+			prettyPrint()
+		}
+
+		function save() {
+			if (confirm('Save? Pictures not listed in Growtable get removed, grow reloads')) {
+				document.forms['form'].submit();
+			}
+		}
+
+		function prettyPrint() {
+			var pretty = JSON.stringify(JSON.parse(textarea.value), undefined, 4)
+			textarea.value = pretty;
+			document.getElementById("pretty").style.display = 'none';
+		}
+
+		function initPlugcontrol(currentPlugList) {
+			plugList = currentPlugList;
+			var selectTest = document.getElementById("plugControl");
+			var selectCalibrate = document.getElementById("plugControlCalibrate");
+			for (var i = 0; i < plugList.length; i++) {
+				var opt = plugList[i].Name;
+				var el1 = document.createElement("option");
+				el1.textContent = opt;
+				el1.value = opt;
+				var el2 = document.createElement("option");
+				el2.textContent = opt;
+				el2.value = opt;
+				selectTest.appendChild(el1);
+				selectCalibrate.appendChild(el2);
+			}
+		}
+
+		function calibrate(e,plugListIndex) {
+			plugListIndex-- //default-description option
+			if (plugListIndex == plugList.length) {
+				return false;
+			}
+			if (plugListIndex == 0) { //first = alert on
+				if (!confirm('Start sniffing remote-ON-button: ' + plugList[plugListIndex].Name + '? (used for SIM alert, alerts again if no signal for 3 minutes)')) { return false };
+				getPlug(plugListIndex);
+			}
+			if (plugListIndex == 1) { //second = alert off
+				if (!confirm('Start sniffing remote-OFF-button: ' + plugList[plugListIndex].Name + '? (used for SIM alert, alerts again if no signal for 3 minutes)')) { return false };
+				getPlug(plugListIndex);
+			}
+			if (plugListIndex >= 2) { //others
+				if (!confirm('Start sniffing for ' + plugList[plugListIndex].Name+'? (alerts again if no signal for 3 minutes)')) { return false };
+				getPlug(plugListIndex);
+			}
+			e.value = '';
+			return false;
+		}
+
+		function plugControl(e) {
+				fetch(plugRequest, { method: 'POST', body: e.value });
+			e.value = '';
+		}
+
+		function updatePlug(plugListIndex, newPlug) {
+			plugList[plugListIndex].Code = newPlug.Code;
+			plugList[plugListIndex].PulseLength = newPlug.PulseLength;
+			plugList[plugListIndex].ProtocolIndex = newPlug.ProtocolIndex;
+
+			var newGrowganizer = JSON.parse(textarea.value);
+			newGrowganizer.PlugControls[plugListIndex] = plugList[plugListIndex]
+			textarea.value = JSON.stringify(newGrowganizer, undefined, 4);
+			changed(true)
+		}
+
+		function getPlug(plugListIndex) {
+			fetch(calibrateRequest, { method: 'POST', body: plugList[plugListIndex].PinNumberReceive }).then(response => response.text())
+				.then(body => {
+					console.log("got: " + body);
+					body = body.replace("̀", "")
+					let newPlug = JSON.parse(body);
+					if (newPlug.Code != 0) {
+						updatePlug(plugListIndex, newPlug)
+						// calibrate(plugListIndex + 1);
+					} else {
+						if (confirm('Could not detect plug: ' + plugList[plugListIndex].Name + ". Go closer, check PinNumberReceive, try again?")) {
+							calibrate(plugListIndex);
+						}
+					}
+				})
+				.catch(console.error);
+		}
+
+		function changed(b) {
+			if (b) {
+				document.getElementById('save').style.display = 'block';
+				textarea.style.background = 'blueviolet';
+				Array.from(document.getElementsByClassName('saveHide')).forEach(e => e.style.display = 'none');
+			} else {
+				document.getElementById('save').style.display = 'none';
+				textarea.style.background = '';
+				Array.from(document.getElementsByClassName('saveHide')).forEach(e => e.style.display = '');
+			}
+		}
+
+		function validated(b) {
+			document.getElementById("pretty").style.display = 'none';
+			if (!b) {
+				document.getElementById('save').style.display = 'none';
+				return
+			}
+			if (textarea.value != JSON.stringify(JSON.parse(textarea.value), undefined, 4)) {
+				document.getElementById("pretty").style.display = 'inline-block';
+			}
+		}
+
+		function key(e) {
+			var v = e.value, s = e.selectionStart, end = e.selectionEnd;
+			e.value = v.substring(0, s) + '\t' + v.substring(end);
+			e.selectionStart = e.selectionEnd = s + 1;
+			return false;
+		}
+
+		function input(e) {
+			// e.style.height = "";
+			// e.style.height = e.scrollHeight + "px"
+
+			var json
+			try {
+				json = JSON.parse(textarea.value);
+			} catch (e) {
+				changed(true)
+				validated(false)
+				return
+			}
+			var pretty = JSON.stringify(json, undefined, 4)
+			changed(pretty != growganizer || pretty != growtable)
+			validated(true)
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>
