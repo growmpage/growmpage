@@ -26,9 +26,9 @@ Creating an all-round carefree package for a quiet 1m² growbox for approx. 1000
 - Keeping the code as vanilla as you can
 
 # State
-![latest](https://github.com/github/v/release/test/growmpage)
+![latest]((https://github.com/growmpage/growmpage/releases/latest))
 
-![CD](https://github.com/github/docs/actions/workflows/go.yml/badge.svg)
+![CD](https://github.com/growmpage/growmpage/actions/workflows/go.yml/badge.svg)
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
@@ -133,7 +133,7 @@ Simply execute this line in your raspberry /home/pi/
 TODO: take new pictures
 
 #### Shopping cart
-* [Growbox](https://www.grow-shop24.de/led-homebox-q80-s-komplettset)
+* [Growbox](https://www.grow-shop24.de/low-budget-led-growbox-komplettset-s-80x80x180cm)
 * [Controller](https://amazon.de/dp/B00FJ5AQFA/ref=cm_sw_r_tw_dp_U_x_zZ1pDb9X1TFJK)
 * [Water measuring devices](https://grow-shop24.de/ph-ec-set-messung)
 * [Airpot](https://grow-shop24.de/Air-PotZ-Superoot-3-L)
@@ -146,7 +146,7 @@ TODO: take new pictures
 * [Only Torquelltöpfe](https://grow-shop24.de/jiffy-torfquelltoepfe)
 * [Only Fertilizer](https://grow-shop24.de/canna-duengerset-basis)
 
-* [Pebbles](https://grow-shop24.de/Blaehton-CANNA-Clay-Pebbles-Tongranulat-10L)
+* [Pebbles](https://www.grow-shop24.de/blaehton-canna-clay-pebbles-tongranulat-45l)
 * [Gelbtafeln](https://grow-shop24.de/gelbtafeln-gelbsticker)
 * [Bamboo stick](https://grow-shop24.de/Bambusstock-60cm)
 * [Labels](https://grow-shop24.de/romberg-schildetiketten)
