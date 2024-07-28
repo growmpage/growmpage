@@ -1,4 +1,24 @@
-TODO: Move to github.com/issues
+See VSCode ISSUES, make Bleistift-Zeichnung für zum Beispiel Über Alle Wochen Sachen(Startzeit des Growbox-Tages, somit reicht Sonnenstundenangabe aus), oder Alert bei Abweichung X (internes Format so lassen).
+Einfacher machen!
+
+just use easy small divs, use sun-clock-like for light, maybe a big editable timeline with Measure, Picture, Light and with a Name to make copies. And care for light, rotator and so on for week change!
+Also Timeline/Graph for Temp/Hum would be nicer to watch and judge. Oder 18 Stunden ab XXUhr ... let glow if now on/off
+
+growtable doch bibliothek oder noch vereinfachen: dropdown eingefärbt mit Temp/Hum als Zahl und bei select erscheint Bild. Movie seperat auf Pi generieren(immer gleiche zeit, kann im browser schneller/langsamer machen?)
+
+
+
+
+
+
+
+
+
+
+
+sort growtable entries by name
+
+compare with public repo
 
 test install guide from beginning
 

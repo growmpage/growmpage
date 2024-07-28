@@ -6,14 +6,13 @@ import (
 	"time"
 )
 
-func getNow() time.Time{
+func getNow() time.Time {
 	return time.Now().Local()
 }
 
-func getTime(minutes int) time.Time{
+func getTime(minutes int) time.Time {
 	return time.Unix(int64(minutes*60), 0).Local()
 }
-
 
 func HtmlDate(date string) (time.Time, error) {
 	return time.ParseInLocation("2006-01-02", date, time.Local)
@@ -32,12 +31,16 @@ func DaysSinceHtmlDate(date string) int {
 	return days
 }
 
-func Days(minutes int) int {
-	return minutes/60/24
+func Day(minutes int) int {
+	return getTime(minutes).Day()
 }
 
 func Time(minutes int) string {
 	return getTime(minutes).Format("15:04")
+}
+
+func SecondsNow() int {
+	return getNow().Second()
 }
 
 func Date(minutes int) string {

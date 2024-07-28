@@ -17,12 +17,12 @@ func TestReadFromFile(t *testing.T) { // TODO: add ../ for all paths used here, 
 		name     string
 		contains string
 	}{
-		{name: "growganizer", contains: "Keep Plants Growing Horizontally Under the Screen if Bigger5cm above net. [{Measure {00:00  60} {AnyCondition 0  0}} {Picture {10:00 22:00 90} {AnyCondition 0  0}} {LightOnA {10:00  0} {AnyCondition 0  0}} {LightOffA"},
+		{name: "growganizer", contains: "Succesfull tested my growbox with all controls for a week"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := ReadFromFile(); !strings.Contains(fmt.Sprintf("%v", got), tt.contains) {
-				t.Errorf("ReadFromFile() = %v, want %v", got, tt.contains)
+				t.Errorf("ReadFromFile() = %v, want containing in %v", got, tt.contains)
 			}
 		})
 	}

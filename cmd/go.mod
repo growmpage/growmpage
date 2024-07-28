@@ -1,4 +1,4 @@
-module github.com/growmpage
+module github.com/growmpage/growmpage
 
 go 1.22
 

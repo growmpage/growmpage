@@ -41,6 +41,13 @@ func TestWeek_createGrowcontrolPlan(t *testing.T) {
 				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + (6*60 + 690), Action: "Alert"},
 			}},
 		},
+		{
+			fields: fields{Growcontrols: []Growcontrol{Growcontrol{Time: Time{Start: "", EveryMinutes: 720, End: ""}, Action: growsensorActions[2]}}},
+			want: TimeTableForToday{timeTableEntrys: []TimeTableEntry{
+				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime(), Action: "Alert"},
+				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + 720, Action: "Alert"},
+			}},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -65,7 +72,7 @@ func TestTimeTableForToday_getIndexToStart(t *testing.T) {
 	}{
 		{
 			fields: fields{timeTableEntrys: []TimeTableEntry{
-				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + (6 * 60), Action: "Alert"},
+				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + (0), Action: "Alert"},
 				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + (24 * 60), Action: "Alert"},
 				TimeTableEntry{TimeInMinutes: growhelper.MinutesNoTime() + (24 * 61), Action: "Alert"},
 			}},

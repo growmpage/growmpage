@@ -18,7 +18,7 @@ type Growganizer struct {
 	Alerts          []string
 }
 
-type PlugControl struct {
+type PlugControl struct { //TODO: move to growswitcher
 	Name             string
 	Code             int
 	PinNumberReceive int

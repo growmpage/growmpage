@@ -1,6 +1,6 @@
 {
- "Version": "v1.0.0",
- "ActiveWeekIndex": 1,
+ "Version": "v1.0.1",
+ "ActiveWeekIndex": 0,
  "PlugControls": [
   {
    "Name": "SimOnC",
@@ -85,91 +85,21 @@
  ],
  "Weeks": [
   {
-   "Name": "Free",
-   "Start": "2024-02-22",
-   "Temperature": 25,
-   "Humidity": 70,
-   "EC": 0.9,
-   "Dung": "",
-   "LightMode": "",
-   "LightHours": 0,
-   "Done": "bla",
-   "Todo": "bla bla",
-   "Growcontrols": [
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    }
-   ]
-  },
-  {
    "Name": "Testweek",
-   "Start": "2024-02-22",
-   "Temperature": 25,
+   "Start": "2024-06-14",
+   "Temperature": 20,
    "Humidity": 70,
    "EC": 0.9,
    "Dung": "",
-   "LightMode": "",
-   "LightHours": 0,
+   "LightMode": "W",
+   "LightHours": 18,
    "Done": "Succesfull tested my growbox with all controls for a week",
-   "Todo": "Read the this README and have fun to grow. Clean everything, also yourself every time before touching anything! Calibrate EC+PH device.\r\n\r\n+++Sativa like Amnesia Haze and Sour Diesel+++\r\n\r\nIf your room temperature will rise above 23°C in the next 3 months, turn on the light at night during flower-time or let the air tubes access fresh air and shut off any heater near by.\r\nThe optimal temperatures listed in the Groworganizer is meant for light-time, during night it should be about 5°C colder.\r\n\r\nAlways water if soil dried out (Finger in 5cm depth should feel dry).\r\nPH always 6,1. (increase: PH-Upper || decrease: PH-Downer).\r\nEC: see Groworganizer (increase: normal water or dung || decrease: dest. water).\r\nHumidity: (increase: wet paper towels or humidifier or low temperature in the growbox || decrease: high temperature or Rotator).\r\n\r\nKeep Carbon Filter System always running, play with the rotary switches to handle temperature and vacuum (for the smell).\r\nIf you have different seeds, keep in mind to label them from the beginning!\r\n\r\nThe rotator can always run.\r\n\r\nMore Information on: \r\nhttps://www.zamnesia.com/de/cannabisanbauanleitung\r\nor \r\nhttps://www.leafly.com/news/growing",
+   "Todo": "Read the this README and have fun to grow. Clean everything, also yourself every time before touching anything! Calibrate EC+PH device.\r\n\r\n+++Sativa like Amnesia Haze and Sour Diesel+++\r\n\r\nIf your room temperature will rise above 23°C in the next 3 months, turn on the light at night during flower-time or let the air tubes access fresh air and shut off any heater near by.\r\nThe optimal temperatures listed in the Groworganizer is meant for light-time, during night it should be about 5°C colder.\r\n\r\nAlways water if soil dried out (Finger in 5cm depth should feel dry).\r\nPH always 6,1. (increase: PH-Upper || decrease: PH-Downer).\r\nEC: see Groworganizer (increase: normal water or dung || decrease: dest. water).\r\nHumidity: (increase: wet paper towels or humidifier or low temperature || decrease: high temperature, dehumidifier or rotator).\r\n\r\nKeep Carbon Filter System always running, play with the rotary switches to handle temperature and vacuum (for the smell).\r\nIf you have different seeds, keep in mind to label them from the beginning!\r\n\r\nThe rotator can always run.\r\n\r\nMore Information on: \r\nhttps://www.zamnesia.com/de/cannabisanbauanleitung\r\nor \r\nhttps://www.leafly.com/news/growing",
    "Growcontrols": [
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
     {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -183,7 +113,63 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
       "End": "",
       "EveryMinutes": 0
      },
@@ -218,174 +204,6 @@
      "Condition": {
       "Value": "MinTemperature",
       "SinceHours": 24,
-      "ComparisonSign": "smaller",
-      "ComparedTo": 17
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:02",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MaxTemperature",
-      "SinceHours": 24,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 28
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:04",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MinHumidity",
-      "SinceHours": 24,
-      "ComparisonSign": "smaller",
-      "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:06",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MaxHumidity",
-      "SinceHours": 24,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 80
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 30
-     },
-     "Condition": {
-      "Value": "Humidity",
-      "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 45
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 30
-     },
-     "Condition": {
-      "Value": "Humidity",
-      "SinceHours": 0,
-      "ComparisonSign": "smaller",
-      "ComparedTo": 44
-     }
-    }
-   ]
-  },
-  {
-   "Name": "Seeds",
-   "Start": "",
-   "Temperature": 20,
-   "Humidity": 70,
-   "EC": 0.9,
-   "Dung": "No Dung!",
-   "LightMode": "",
-   "LightHours": 0,
-   "Done": "First leaf",
-   "Todo": "Make a paper towel wet, wring it out and put it on top of a pot saucer. Put your 5 seeds on it (never touch with hands), another paper towel on top, another pot saucer on top so it builds a little room for air. You can put this in the growbox without any lights, the seeds like darkness and temperatures between 20 and 30 Celcius, make them wet morning/evening if necessary for about 3 days.\r\nPut every soil block in a glas of water, after 5 minutes empty the glas, grab a little hole about 2cm, take the shell of a seed and put the roots down into the soil, some soil over it, no pressure.",
-   "Growcontrols": [
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "08:00",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "CountPastDays",
-      "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:00",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MinTemperature",
-      "SinceHours": 0,
       "ComparisonSign": "smaller",
       "ComparedTo": 17
      }
@@ -435,49 +253,21 @@
    ]
   },
   {
-   "Name": "Light",
-   "Start": "",
-   "Temperature": 22,
+   "Name": "Seeds",
+   "Start": "2024-06-25",
+   "Temperature": 20,
    "Humidity": 70,
    "EC": 0.9,
    "Dung": "No Dung!",
    "LightMode": "W",
    "LightHours": 18,
-   "Done": "",
-   "Todo": "Put the light about 30cm above the plants",
+   "Done": "First leaf",
+   "Todo": "Make a paper towel wet, wring it out and put it on top of a pot saucer. Put your 2-3 seeds on it (never touch with hands), another paper towel on top, another pot saucer on top so it builds a little room for air. You can put this in the growbox without any lights, the seeds like darkness and temperatures between 20 and 30 Celcius, make them wet every morning/evening for about 3 days until roots are about 2cm long.\r\nPut a soil block in a glas of water, after 5 minutes empty the glas, or use any about 3cm pot, grab a little hole about 2cm, take the shell of a seed and put the roots down into the soil, some soil over it, no pressure.\r\nPut the light about 30cm above the plants\r\n\r\nTODO(letzter Versuch mit Runtz): direkt in kokospellet, Licht 10cm drüber. Diese Woche aufteilen (Licht mit/ohne)",
    "Growcontrols": [
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 10
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
     {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -491,9 +281,51 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
       "End": "",
       "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
      },
      "Condition": {
       "Value": "AnyCondition",
@@ -519,7 +351,7 @@
     {
      "Action": "Alert",
      "Time": {
-      "Start": "17:40",
+      "Start": "18:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -541,7 +373,7 @@
       "Value": "MinTemperature",
       "SinceHours": 24,
       "ComparisonSign": "smaller",
-      "ComparedTo": 19
+      "ComparedTo": 17
      }
     },
     {
@@ -555,7 +387,7 @@
       "Value": "MaxTemperature",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 28
+      "ComparedTo": 25
      }
     },
     {
@@ -590,48 +422,20 @@
   },
   {
    "Name": "Leaves",
-   "Start": "",
+   "Start": "2024-07-03",
    "Temperature": 22,
    "Humidity": 70,
    "EC": 0.9,
    "Dung": "No Dung!",
    "LightMode": "W",
    "LightHours": 18,
-   "Done": "The 2-3 leafs fill out the glas and you can see the white roots.",
+   "Done": "2-3 leafs fill out the glas and you can see the white roots.",
    "Todo": "",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -645,7 +449,63 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
       "End": "",
       "EveryMinutes": 0
      },
@@ -668,20 +528,6 @@
       "SinceHours": 0,
       "ComparisonSign": "bigger",
       "ComparedTo": 6
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     },
     {
@@ -744,7 +590,7 @@
   },
   {
    "Name": "Airpot",
-   "Start": "",
+   "Start": "2024-07-12",
    "Temperature": 25,
    "Humidity": 60,
    "EC": 0.9,
@@ -755,37 +601,9 @@
    "Todo": "Prepare an Airpot with soil and a bigger whole, remove the web from the soil block (if you have one) and put the plant into the Airpot, water them from above.\r\nYou can water two times a day or every 3 days, overwatering is not possible with Airpots.",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -799,7 +617,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -808,166 +626,12 @@
       "SinceHours": 0,
       "ComparisonSign": "",
       "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "18:00",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "CountPastDays",
-      "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:00",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MinTemperature",
-      "SinceHours": 0,
-      "ComparisonSign": "smaller",
-      "ComparedTo": 17
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:02",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MaxTemperature",
-      "SinceHours": 24,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 29
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:04",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MinHumidity",
-      "SinceHours": 24,
-      "ComparisonSign": "smaller",
-      "ComparedTo": 60
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
-      "Start": "20:06",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "MaxHumidity",
-      "SinceHours": 24,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 80
      }
     },
     {
      "Action": "RotatorOnB",
      "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    }
-   ]
-  },
-  {
-   "Name": "Little Dung",
-   "Start": "",
-   "Temperature": 25,
-   "Humidity": 60,
-   "EC": 1,
-   "Dung": "Terra Vega 1ml/10L",
-   "LightMode": "W",
-   "LightHours": 18,
-   "Done": "a week after toping",
-   "Todo": "Add a little dung.\r\nKeep a fan right on the plants.\r\nTop like here: https://www.growweedeasy.com/wp-content/uploads/2013/05/5th-set-leaves-plucked-here.jpg",
-   "Growcontrols": [
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "LightOnA",
-     "Time": {
-      "Start": "07:00",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
@@ -979,9 +643,37 @@
      }
     },
     {
-     "Action": "LightOffA",
+     "Action": "Measure",
      "Time": {
-      "Start": "01:00",
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1009,27 +701,13 @@
     {
      "Action": "Alert",
      "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 17
      }
@@ -1073,15 +751,57 @@
       "Value": "MaxHumidity",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 80
+      "ComparedTo": 70
+     }
+    }
+   ]
+  },
+  {
+   "Name": "Little Dung",
+   "Start": "2024-07-22",
+   "Temperature": 25,
+   "Humidity": 60,
+   "EC": 1,
+   "Dung": "Terra Vega 1ml/10L",
+   "LightMode": "W",
+   "LightHours": 18,
+   "Done": "roots try to break out",
+   "Todo": "Add a little dung.\r\nKeep a fan right on the plants.\r\nTop like here: https://www.growweedeasy.com/wp-content/uploads/2013/05/5th-set-leaves-plucked-here.jpg",
+   "Growcontrols": [
+    {
+     "Action": "LightOnA",
+     "Time": {
+      "Start": "15:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "LightOffA",
+     "Time": {
+      "Start": "09:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
      "Action": "RotatorOnB",
      "Time": {
-      "Start": "00:00",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 2
+      "EveryMinutes": 0
      },
      "Condition": {
       "Value": "AnyCondition",
@@ -1091,24 +811,122 @@
      }
     },
     {
-     "Action": "RotatorOffB",
+     "Action": "Measure",
      "Time": {
-      "Start": "00:00",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 4
+      "EveryMinutes": 120
      },
      "Condition": {
       "Value": "AnyCondition",
       "SinceHours": 0,
       "ComparisonSign": "",
       "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 17
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:02",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxTemperature",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 29
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:04",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MinHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "smaller",
+      "ComparedTo": 50
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:06",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "MaxHumidity",
+      "SinceHours": 24,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 70
      }
     }
    ]
   },
   {
    "Name": "Autopot",
-   "Start": "",
+   "Start": "2024-07-27",
    "Temperature": 25,
    "Humidity": 60,
    "EC": 1,
@@ -1119,37 +937,9 @@
    "Todo": "Install Autopot system (Clean all, black matt and 5cm clay pebbles on the ground).\r\nDismantle Airpot, put the plants in Autopot, water also from above the first time.\r\n",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1163,7 +953,63 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "RotatorOnB",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
+      "Start": "20:15",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1191,29 +1037,15 @@
     {
      "Action": "Alert",
      "Time": {
-      "Start": "20:15",
-      "End": "",
-      "EveryMinutes": 0
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Alert",
-     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
-      "ComparedTo": 17
+      "ComparedTo": 15
      }
     },
     {
@@ -1227,7 +1059,7 @@
       "Value": "MaxTemperature",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 29
+      "ComparedTo": 30
      }
     },
     {
@@ -1241,7 +1073,7 @@
       "Value": "MinHumidity",
       "SinceHours": 24,
       "ComparisonSign": "smaller",
-      "ComparedTo": 50
+      "ComparedTo": 45
      }
     },
     {
@@ -1256,34 +1088,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 75
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -1301,37 +1105,9 @@
    "Todo": "Put light every day nearer until burning signs appear.\r\n\r\nCreate 4 U-shaped spikes (eg. clothes hanger) like this: https://www.growweedeasy.com/wp-content/uploads/2013/05/u-shaped-spikes-made-of-clothes-hangers-sm.jpg\r\n\r\nGently fold down the 4 mains and spike it to soil like here: https://www.growweedeasy.com/wp-content/uploads/2013/05/4-hanger-sites-placement-sm.jpg",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "07:00",
-      "End": "01:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "07:00",
+      "Start": "15:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1345,7 +1121,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "01:00",
+      "Start": "09:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1357,17 +1133,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -1387,13 +1191,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 17
      }
@@ -1437,35 +1255,7 @@
       "Value": "MaxHumidity",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 75
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
+      "ComparedTo": 70
      }
     }
    ]
@@ -1483,37 +1273,9 @@
    "Todo": "Place net 20cm above soil.\r\nFold branches out and away from the main stem, like a flower opening up or peeling a banana.\r\nIf branch is more than 5cm above net, tuck like here: https://www.youtube.com/watch?v=ceLFSWwV3Zc",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "08:00",
-      "End": "23:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "08:00",
+      "Start": "17:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1527,7 +1289,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "23:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1539,17 +1301,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -1569,13 +1359,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 17
      }
@@ -1619,35 +1423,7 @@
       "Value": "MaxHumidity",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 75
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
+      "ComparedTo": 70
      }
     }
    ]
@@ -1665,37 +1441,9 @@
    "Todo": "Look for males, install a wood stock for later stability if not using a net.\r\nCalibrate EC+PH device.\r\nUntil A Few Weeks into the Flowering Stage, Use Tucking to Keep Plants Growing Horizontally Under the Screen if Bigger5cm above net.",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1709,7 +1457,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1721,17 +1469,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -1751,13 +1527,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -1802,34 +1592,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 60
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -1847,37 +1609,9 @@
    "Todo": "Keep tucking",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1891,7 +1625,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -1903,17 +1637,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -1933,13 +1695,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -1983,35 +1759,7 @@
       "Value": "MaxHumidity",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 64
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
+      "ComparedTo": 60
      }
     }
    ]
@@ -2029,37 +1777,9 @@
    "Todo": "SCROG: Tucking and prune everything under net (Lollipoping)",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2073,7 +1793,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2085,17 +1805,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -2115,13 +1863,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -2149,7 +1911,7 @@
      },
      "Condition": {
       "Value": "MinHumidity",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 30
      }
@@ -2165,35 +1927,7 @@
       "Value": "MaxHumidity",
       "SinceHours": 24,
       "ComparisonSign": "bigger",
-      "ComparedTo": 63
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
+      "ComparedTo": 50
      }
     }
    ]
@@ -2211,37 +1945,9 @@
    "Todo": "Flower Dung!\r\n\r\nIf not SCROG: Manicure first 20cm like here:\r\nhttps://www.leafly.com/news/growing?jwsource=cl",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2255,7 +1961,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2267,17 +1973,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -2297,13 +2031,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -2348,34 +2096,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -2393,37 +2113,9 @@
    "Todo": "Stop Tucking, just let gain height.",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2437,7 +2129,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2449,17 +2141,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -2479,13 +2199,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -2530,34 +2264,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -2575,37 +2281,9 @@
    "Todo": "",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2619,7 +2297,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2631,17 +2309,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -2661,13 +2367,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -2712,34 +2432,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -2754,40 +2446,12 @@
    "LightMode": "W+V+B",
    "LightHours": 12,
    "Done": "",
-   "Todo": "",
+   "Todo": "Some Seeds only need 8 weeks flower time, so maybe start flushing right now.\r\n\r\nTODO: get time 2 weeks before 10% Bernstein",
    "Growcontrols": [
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
     {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2801,7 +2465,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2813,17 +2477,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -2843,13 +2535,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -2894,34 +2600,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -2939,37 +2617,9 @@
    "Todo": "Empty AutoPot reservoir with tube, because we will water from above next week.",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2983,7 +2633,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -2995,17 +2645,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -3025,13 +2703,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -3076,34 +2768,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -3121,51 +2785,9 @@
    "Todo": "Water from above with dest. water (PH checked) ",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -3179,7 +2801,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -3191,17 +2813,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -3221,13 +2871,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -3272,34 +2936,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 50
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -3317,37 +2953,9 @@
    "Todo": "Water from above with dest. water (PH checked) ",
    "Growcontrols": [
     {
-     "Action": "Measure",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 60
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "Picture",
-     "Time": {
-      "Start": "10:00",
-      "End": "22:00",
-      "EveryMinutes": 90
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
      "Action": "LightOnA",
      "Time": {
-      "Start": "10:00",
+      "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -3361,7 +2969,7 @@
     {
      "Action": "LightOffA",
      "Time": {
-      "Start": "22:00",
+      "Start": "08:00",
       "End": "",
       "EveryMinutes": 0
      },
@@ -3373,17 +2981,45 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Measure",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -3403,13 +3039,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -3455,34 +3105,6 @@
       "ComparisonSign": "bigger",
       "ComparedTo": 50
      }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
     }
    ]
   },
@@ -3499,11 +3121,11 @@
    "Todo": "Do not Water and do not turn light on for 24-72 hours, then cut off like described here:\r\nhttps://www.leafly.com/news/growing?jwsource=cl\r\n\r\nCut above soil and turn arround the whole net to dry upside down.\r\nRemove only unsticky leafs, all to trash.\r\nWithout net, heng the plants one by one with a thread upside down in the box.\r\n",
    "Growcontrols": [
     {
-     "Action": "Measure",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "00:00",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 60
+      "EveryMinutes": 0
      },
      "Condition": {
       "Value": "AnyCondition",
@@ -3513,17 +3135,31 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "Measure",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 0
+      "EveryMinutes": 120
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -3543,13 +3179,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -3594,34 +3244,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 60
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]
@@ -3639,11 +3261,11 @@
    "Todo": "Depend e.g. on how hot it was last week",
    "Growcontrols": [
     {
-     "Action": "Measure",
+     "Action": "RotatorOnB",
      "Time": {
-      "Start": "00:00",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 60
+      "EveryMinutes": 0
      },
      "Condition": {
       "Value": "AnyCondition",
@@ -3653,17 +3275,31 @@
      }
     },
     {
-     "Action": "Alert",
+     "Action": "Measure",
      "Time": {
-      "Start": "20:30",
+      "Start": "",
       "End": "",
-      "EveryMinutes": 0
+      "EveryMinutes": 120
      },
      "Condition": {
-      "Value": "CountPastDays",
+      "Value": "AnyCondition",
       "SinceHours": 0,
-      "ComparisonSign": "bigger",
-      "ComparedTo": 6
+      "ComparisonSign": "",
+      "ComparedTo": 0
+     }
+    },
+    {
+     "Action": "Picture",
+     "Time": {
+      "Start": "",
+      "End": "",
+      "EveryMinutes": 120
+     },
+     "Condition": {
+      "Value": "AnyCondition",
+      "SinceHours": 0,
+      "ComparisonSign": "",
+      "ComparedTo": 0
      }
     },
     {
@@ -3683,13 +3319,27 @@
     {
      "Action": "Alert",
      "Time": {
+      "Start": "18:00",
+      "End": "",
+      "EveryMinutes": 0
+     },
+     "Condition": {
+      "Value": "CountPastDays",
+      "SinceHours": 0,
+      "ComparisonSign": "bigger",
+      "ComparedTo": 6
+     }
+    },
+    {
+     "Action": "Alert",
+     "Time": {
       "Start": "20:00",
       "End": "",
       "EveryMinutes": 0
      },
      "Condition": {
       "Value": "MinTemperature",
-      "SinceHours": 0,
+      "SinceHours": 24,
       "ComparisonSign": "smaller",
       "ComparedTo": 15
      }
@@ -3734,34 +3384,6 @@
       "SinceHours": 24,
       "ComparisonSign": "bigger",
       "ComparedTo": 60
-     }
-    },
-    {
-     "Action": "RotatorOnB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 2
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
-     }
-    },
-    {
-     "Action": "RotatorOffB",
-     "Time": {
-      "Start": "00:00",
-      "End": "",
-      "EveryMinutes": 4
-     },
-     "Condition": {
-      "Value": "AnyCondition",
-      "SinceHours": 0,
-      "ComparisonSign": "",
-      "ComparedTo": 0
      }
     }
    ]

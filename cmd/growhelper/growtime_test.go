@@ -44,7 +44,7 @@ func TestHtmlDate(t *testing.T) {
 	}
 }
 
-func TestDays(t *testing.T) {
+func TestDay(t *testing.T) {
 	type args struct {
 		minutes int
 	}
@@ -55,34 +55,49 @@ func TestDays(t *testing.T) {
 	}{
 		{
 			name: "1",
-			args: args{minutes: 24 * 60},
-			want: 1,
+			args: args{minutes: 28611240+(24*60)},
+			want: 27,
+		},
+		{
+			name: "1-1",
+			args: args{minutes: 28611240+(23*60)},
+			want: 26,
+		},
+		{
+			name: "1-2",
+			args: args{minutes: 28611240},
+			want: 26,
+		},
+		{
+			name: "1-3",
+			args: args{minutes: 28611240-1},
+			want: 25,
 		},
 		{
 			name: "2",
 			args: args{minutes: 48 * 60},
-			want: 2,
+			want: 3,
 		},
 		{
 			name: "0",
 			args: args{minutes: 0},
-			want: 0,
+			want: 1,
 		},
 		{
 			name: "5-0",
 			args: args{minutes: 5},
-			want: 0,
+			want: 1,
 		},
 		{
 			name: "25-1",
 			args: args{minutes: 25 * 60},
-			want: 1,
+			want: 2,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Days(tt.args.minutes); got != tt.want {
-				t.Errorf("Days() = %v, want %v", got, tt.want)
+			if got := Day(tt.args.minutes); got != tt.want {
+				t.Errorf("Day() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -100,27 +115,27 @@ func TestTime(t *testing.T) {
 		{
 			name: "1",
 			args: args{minutes: 5},
-			want: "00:05",
+			want: "01:05",
 		},
 		{
 			name: "2",
 			args: args{minutes: 0},
-			want: "00:00",
+			want: "01:00",
 		},
 		{
 			name: "3",
 			args: args{minutes: 65},
-			want: "01:05",
+			want: "02:05",
 		},
 		{
 			name: "4",
 			args: args{minutes: 24 * 60},
-			want: "00:00",
+			want: "01:00",
 		},
 		{
 			name: "5",
 			args: args{minutes: 25 * 60},
-			want: "01:00",
+			want: "02:00",
 		},
 	}
 	for _, tt := range tests {
@@ -215,7 +230,7 @@ func TestDaysToMinutes(t *testing.T) {
 }
 
 func TestMinutesNoTime(t *testing.T) {
-	now := time.Now().Local().UTC()
+	now := time.Now().Local()
 	tests := []struct {
 		name string
 		want int

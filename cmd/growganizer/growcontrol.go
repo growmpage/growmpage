@@ -63,13 +63,14 @@ func (g *Growcontroller) startDailyGrowcontrol() {
 }
 
 func (t *TimeTableEntry) execute() {
-	fmt.Printf("t.Action: %v\n", t.Action)
+	fmt.Printf("try to t.Action: %v\n", t.Action)
 	if t.Condition.Value == anyCondition || t.Condition.Value == "" {
 		execute(t)
 		return
 	}
 	value := t.value()
 	if value == growhelper.ErrorValue {
+		fmt.Printf("%v value from growtable report ErrorValue\n", t.Action)
 		return
 	}
 	switch t.Condition.ComparisonSign {
@@ -79,6 +80,10 @@ func (t *TimeTableEntry) execute() {
 		}
 	case smaller:
 		if value < t.Condition.ComparedTo {
+			execute(t)
+		}
+	default:
+		if value == t.Condition.ComparedTo {
 			execute(t)
 		}
 	}
@@ -114,6 +119,9 @@ func (t *TimeTableEntry) createAlertMessage() string {
 }
 
 func (t *TimeTableEntry) value() int {
+	if t.Condition.Value == countPastDays {
+		return growhelper.ToInt(growhelper.Get("DAYSSINCEACTIVESTARTDATE"))
+	}
 	sinceHours := growhelper.ToString(t.Condition.SinceHours)
 	answer := growhelper.Post("GROWTABLEREPORT", sinceHours)
 	report := growhelper.ReadReport(answer)

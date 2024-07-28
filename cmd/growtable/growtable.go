@@ -3,6 +3,7 @@ package growtable
 import (
 	"encoding/json"
 	"fmt"
+	"math"
 	"os"
 	"sort"
 	"strings"
@@ -47,15 +48,14 @@ func (g *Growtable) SaveToFile() {
 	// })
 }
 
-func (g *Growtable) RawUpdate(growtableJson string, cleanup bool) {
+func (g *Growtable) RawUpdateGrowtable(growtableJson string, removePictures bool) {
 	err := json.Unmarshal([]byte(growtableJson), &g)
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 		growhelper.Post("ALERT", err.Error())
-	} else {
-		if cleanup {
-			g.removeUndocumentedPictures() //TODO: new function -> cleanup button?
-		}
+	}
+	if removePictures {
+		g.removeUndocumentedPictures() //TODO: new function -> cleanup button?
 	}
 }
 
@@ -63,43 +63,59 @@ func (g *Growtable) removeUndocumentedPictures() {
 	base := growhelper.Filename_pictures
 	files, _ := os.ReadDir(base)
 	for _, file := range files {
+		// fmt.Printf("file.Name(): %v\n", file.Name())
+		if file.Name() == "toCopy.png" {
+			continue
+		}
 		f := base + file.Name()
 		minutes := growhelper.ToInt(strings.Split(file.Name(), ".")[0])
+		fmt.Printf("think of deleting %v with minutes: %v and path %v\n", file.Name(), minutes, f)
 		if !g.hasPicture(minutes) {
-			if file.Name() != "toCopy.png" {
-				fmt.Println("remove " + f)
-				os.Remove(f)
-			}
+			fmt.Println("remove " + f)
+			os.Remove(f)
 		}
 	}
 }
 
-func (g *Growtable) Add(temperature, humidity, pictureMinutes int, week Week) {
-	// g.withLockContext(func() {
-	var minute int = growhelper.Minutes()
-	var picture bool = false
-	if pictureMinutes > 1 {
-		minute = pictureMinutes
-		picture = true
-	}
+func (g *Growtable) AddPicture(minute int, week Week) {
 	if len(g.Measurements) == 0 {
 		g.Measurements = []Measurement{{
 			TimeInMinutes: minute,
 		}}
 	}
+
 	sameMinute := g.Measurements[0].TimeInMinutes == minute
 	if sameMinute {
+		g.Measurements[0].Picture = true
+	} else {
+		g.Measurements = append(
+			[]Measurement{{
+				TimeInMinutes: minute,
+				Picture:       true,
+			}}, g.Measurements...)
+	}
+
+	growhelper.Get("UPDATE")
+}
+
+func (g *Growtable) AddMeasurement(temperature int, humidity int, week Week) {
+	var minute int = growhelper.Minutes()
+	if len(g.Measurements) == 0 {
+		g.Measurements = []Measurement{{
+			TimeInMinutes: minute,
+		}}
+	}
+
+	diffMinute := g.Measurements[0].TimeInMinutes - minute
+	if math.Abs(float64(diffMinute)) < 2 {
 		g.Measurements[0].Temperature = temperature
 		g.Measurements[0].Humidity = humidity
-		g.Measurements[0].Picture = picture
-
 	} else {
 		g.Measurements = append(
 			[]Measurement{{
 				TimeInMinutes: minute,
 				Temperature:   temperature,
 				Humidity:      humidity,
-				Picture:       picture,
 			}}, g.Measurements...)
 	}
 

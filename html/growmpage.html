@@ -241,205 +241,211 @@
 </head>
 
 <body>
-	<div id="navigation">
-		<button id="save" onclick="save()">save &#128190;</button>
-		<button class="saveHide" onclick="route('Snapshot')">Live status</button>
+<div id="navigation">
+	<button id="save" onclick="save()">&#128190;</button>
+	<button class="saveHide" onclick="route('Snapshot')">Live status</button>
 
 
-		<div id="movie">
-			<button id="startMovie" onclick="showMovie()">Show Movie</button>
-			<div>
-				<span>last </span>
-				<input id="movie_days" value="1" min="1" max="9999" type="number">
-				<span> days</span>
-			</div>
-			<div>
-				<span>speed: </span>
-				<input id="movie_speed" style="width: 80%;" value="1" min="1" max="10" type="range">
-			</div>
-		</div>
-		<hr>
-		<hr>
-		<button id="counter">Day-Counter:
-			<strong>{{.GetDaysSinceActiveStartDate}}</strong> </button>
+	<!-- <button id="loadAll" onclick="pic()">load pictures</button> -->
+	<!-- TODO: load by clicking on thumbnail.... -->
 
+	<div id="movie">
+		<button id="startMovie" onclick="showMovie()">Show Movie</button>
 		<div>
-			{{ $ActiveWeekIndex := .ActiveWeekIndex }}
+			<span>last </span>
+			<input id="movie_days" value="7" min="1" max="9999" type="number">
+			<span> days</span>
+		</div>
+		<div>
+			<span>speed: </span>
+			<input id="movie_speed" style="width: 80%;" value="1" min="1" max="10" type="range">
+		</div>
+	</div>
+	<hr>
+	<hr>
+	<button id="counter">Day-Counter:
+		<strong>{{.GetDaysSinceActiveStartDate}}</strong> </button>
+
+	<div>
+		{{ $ActiveWeekIndex := .ActiveWeekIndex }}
+		{{range $index, $week := .Weeks}}
+		<div class="weekRow" onclick="showWeek({{$index}})">
+			<a {{if eq $index $ActiveWeekIndex }} style="color: green;" {{end}} class="link" href="#{{$index}}"
+			   id="w-{{$index}}">{{$week.Name}}</a>
+		</div>
+		{{end}}
+		<select id="weekSelectMobile" onchange="showWeek(this.selectedIndex)">
 			{{range $index, $week := .Weeks}}
-			<div class="weekRow" onclick="showWeek({{$index}})">
-				<a {{if eq $index $ActiveWeekIndex }} style="color: green;" {{end}} class="link" href="#{{$index}}"
-					id="w-{{$index}}">{{$week.Name}}</a>
-			</div>
+			<option {{if eq $index $ActiveWeekIndex }} style="color: green;" selected {{end}} value="">
+				{{$week.Name}}</option>
 			{{end}}
-			<select id="weekSelectMobile" onchange="showWeek(this.selectedIndex)">
-				{{range $index, $week := .Weeks}}
-				<option {{if eq $index $ActiveWeekIndex }} style="color: green;" selected {{end}} value="">
-					{{$week.Name}}</option>
-				{{end}}
-			</select>
+		</select>
 
 
 
-		</div>
-
-		<div id="weekControls">
-			<button class="saveHide" onclick="update('ActivateWeek')">Activate</button>
-			<button title="Duplicate/Copy selected Week" class="saveHide" onclick="update('AddWeek')">Duplicate</button>
-			<button title="Delete selected Week" class="saveHide" onclick="update('DeleteWeek')">Remove</button>
-		</div>
-
-		<hr>
-		<hr>
-		<button title="Database edit & share, calibrate plugs" class="saveHide"
-			onclick="route('/html/expert.html')">Database
-			& Plugs</button>
 	</div>
 
-	<div id="content">
+	<div id="weekControls">
+		<button class="saveHide" onclick="update('ActivateWeek')">Activate</button>
+		<button title="Duplicate/Copy selected Week" class="saveHide" onclick="update('AddWeek')">Duplicate</button>
+		<button title="Delete selected Week" class="saveHide" onclick="update('DeleteWeek')">Remove</button>
+	</div>
 
-		<div id="growtable">
-			{{ $lastDay := 0 }}
-			{{range .Measurements}}
-			{{if ne .TimeInDays $lastDay}}
-			{{if ne $lastDay 0 }}
-			<hr>
-			{{end}}
-			{{ $lastDay = .TimeInDays }}
-			{{end}}
-			<a class="growtableEntry" title="{{.DateInString}}" {{if .Picture}} id="entry-{{.TimeInMinutes}}"
-				onmouseenter="hoverGrowtable(this)" href="#{{.TimeInMinutes}}"
-				onclick="fullscreen('{{.TimeInMinutes}}')" {{end}}>
-				<p>{{.TimeInString}}</p>
-				{{if .Temperature}}
-				<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.TemperatureDeviation}},100%,50%);">
-					{{.Temperature}}°C
-				</p>
-				{{end}}
-				{{if .Humidity}}
-				<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.HumidityDeviation}},100%,50%);">
-					{{.Humidity}}%
-				</p>
-				{{end}}
-				{{if .Picture}}
-				<img src='/data/camera/{{.TimeInMinutes}}.png' width="40px">
-				{{end}}
-			</a>
-			{{end}}
+	<hr>
+	<hr>
+	<button title="Database edit & share, calibrate plugs" class="saveHide"
+			onclick="route('/html/expert.html')">Database
+		& Plugs</button>
+</div>
 
-			<hr>
-			{{ range .GetDummyGrowtableEntrys }}
-			<a class="growtableEntry">
-				<p style="color: #222;">00:00</p>
-			</a>
-			{{ end }}
-		</div>
+<div id="content">
 
-		<div id="growganizer">
-			{{ range .Alerts }}
-			<button onmouseenter="color(this,'black')" onmouseleave="color(this,'white');" onclick="deleteAlert(this)"
+	<div id="growtable">
+		{{ $lastDay := 0 }}
+		{{range .Measurements}}
+		{{if ne .TimeInDays $lastDay}}
+		{{if ne $lastDay 0 }}
+		<hr>
+		{{end}}
+		{{ $lastDay = .TimeInDays }}
+		{{end}}
+		<a class="growtableEntry" title="{{.DateInString}}" {{if .Picture}} id="entry-{{.TimeInMinutes}}"
+		   onmouseenter="hoverGrowtable(this)" href="#{{.TimeInMinutes}}"
+		   onclick="fullscreen('{{.TimeInMinutes}}')" {{end}}>
+			<p>{{.TimeInString}}</p>
+			{{if .Temperature}}
+			<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.TemperatureDeviation}},100%,50%);">
+				{{.Temperature}}°C
+			</p>
+			{{end}}
+			{{if .Humidity}}
+			<p id="t-{{.TimeInMinutes}}" style="color: hsl({{.HumidityDeviation}},100%,50%);">
+				{{.Humidity}}%
+			</p>
+			{{end}}
+			{{if .Picture}}
+			<img bla="{{.TimeInMinutes}}" width="40px" class="pic">
+			{{end}}
+		</a>
+		{{end}}
+
+		<hr>
+		{{ range .GetDummyGrowtableEntrys }}
+		<a class="growtableEntry">
+			<p style="color: #222;">00:00</p>
+		</a>
+		{{ end }}
+
+
+
+	</div>
+
+	<div id="growganizer">
+		{{ range .Alerts }}
+		<button onmouseenter="color(this,'black')" onmouseleave="color(this,'white');" onclick="deleteAlert(this)"
 				class="alert">{{.}}</button>
-			{{end}}
+		{{end}}
 
-			<form name="form" method="POST" action="/Update">
-				<input hidden type="text" name="control">
-				<input hidden type="number" name="selectedWeekIndex" value="{{.ActiveWeekIndex}}">
-				<input hidden type="number" name="growcontrolIndex">
-				{{$actions := .GetActions}}
-				{{$anyCondition := .GetAnyConditionString}}
-				{{range $index, $week := .Weeks}}
-				<div class="week">
-					<!-- TODO: replace {{$index}} with form array -->
-					<textarea onchange="changed(this)" class="done" name="Done-{{$index}}" title="Done"
-						rows="1">{{$week.Done}}</textarea>
-					<div>
-						<input onchange="changed(this)" name="Name-{{$index}}" class="name" title="Week-Name"
-							type="text" size="12" value="{{$week.Name}}">
-						<input onchange="changed(this)" name="Start-{{$index}}" title="Week-Start" type="datetime"
-							value="{{$week.Start}}">
-					</div>
-					<div>
-						<input onchange="changed(this)" name="Temperature-{{$index}}" title="Temperature" type="number"
-							max="50" min="0" value="{{$week.Temperature}}">🔥
-						<input onchange="changed(this)" name="Humidity-{{$index}}" title="Humidity" type="number"
-							min="0" max="100" value="{{$week.Humidity}}">
-					</div>
-					<div>
-						<input onchange="changed(this)" name="EC-{{$index}}" title="EC" type="number" min="0" max="5"
-							step="0.1" value="{{$week.EC}}">🍹
-						<input onchange="changed(this)" name="Dung-{{$index}}" class="dung" title="Dung" type="text"
-							size="14" value="{{$week.Dung}}">
-					</div>
-					<div>
-						<input onchange="changed(this)" name="LightMode-{{$index}}" class="lightMode" title="LightMode"
-							type="text" size="6" value="{{$week.LightMode}}">🌞
-						<input onchange="changed(this)" name="LightHours-{{$index}}" title="LightHours" type="number"
-							min="0" max="24" value="{{$week.LightHours}}">
-					</div>
+		<form name="form" method="POST" action="/Update">
+			<input hidden type="text" name="control">
+			<input hidden type="number" name="selectedWeekIndex" value="{{.ActiveWeekIndex}}">
+			<input hidden type="number" name="growcontrolIndex">
+			{{$actions := .GetActions}}
+			{{$anyCondition := .GetAnyConditionString}}
+			{{range $index, $week := .Weeks}}
+			<div class="week">
+				<!-- TODO: replace {{$index}} with form array -->
+				<textarea onchange="changed(this)" class="done" name="Done-{{$index}}" title="Done"
+						  rows="1">{{$week.Done}}</textarea>
+				<div>
+					<input onchange="changed(this)" name="Name-{{$index}}" class="name" title="Week-Name"
+						   type="text" size="12" value="{{$week.Name}}">
+					<input onchange="changed(this)" name="Start-{{$index}}" title="Week-Start" type="datetime"
+						   value="{{$week.Start}}">
+				</div>
+				<div>
+					<input onchange="changed(this)" name="Temperature-{{$index}}" title="Temperature" type="number"
+						   max="50" min="0" value="{{$week.Temperature}}">🔥
+					<input onchange="changed(this)" name="Humidity-{{$index}}" title="Humidity" type="number"
+						   min="0" max="100" value="{{$week.Humidity}}">
+				</div>
+				<div>
+					<input onchange="changed(this)" name="EC-{{$index}}" title="EC" type="number" min="0" max="5"
+						   step="0.1" value="{{$week.EC}}">🍹
+					<input onchange="changed(this)" name="Dung-{{$index}}" class="dung" title="Dung" type="text"
+						   size="14" value="{{$week.Dung}}">
+				</div>
+				<div>
+					<input onchange="changed(this)" name="LightMode-{{$index}}" class="lightMode" title="LightMode"
+						   type="text" size="6" value="{{$week.LightMode}}">🌞
+					<input onchange="changed(this)" name="LightHours-{{$index}}" title="LightHours" type="number"
+						   min="0" max="24" value="{{$week.LightHours}}">
+				</div>
 
-					<div class="flex-container">
-						<div class="flex-child">
+				<div class="flex-container">
+					<div class="flex-child">
 							<textarea onchange="changed(this)" class="todo" name="Todo-{{$index}}" rows="8"
-								title="Todo">{{$week.Todo}}</textarea>
-						</div>
-						<div class="growcontrols flex-child">
-							{{range $growcontrolIndex, $growcontrol := .Growcontrols}}
+									  title="Todo">{{$week.Todo}}</textarea>
+					</div>
+					<div class="growcontrols flex-child">
+						{{range $growcontrolIndex, $growcontrol := .Growcontrols}}
 
-							<div class="growcontrol growcontrol_index_'{{$growcontrolIndex}}'">
-								<button onclick="updateGrowcontrol('DeleteGrowcontrol', '{{$growcontrolIndex}}')"
+						<div class="growcontrol growcontrol_index_'{{$growcontrolIndex}}'">
+							<button onclick="updateGrowcontrol('DeleteGrowcontrol', '{{$growcontrolIndex}}')"
 									title="Delete" class="saveHide">-</button>
-								<select onchange="changed(this);" name="Action-{{$index}}-{{$growcontrolIndex}}"
+							<select onchange="changed(this);" name="Action-{{$index}}-{{$growcontrolIndex}}"
 									title="Action">
-									{{range $actions}}
-									<option {{if eq . $growcontrol.Action}} selected {{end}} value="{{.}}">{{.}}
-									</option>
-									{{end}}
-								</select>
-								<input onchange="changed(this);" name="EveryMinutes-{{$index}}-{{$growcontrolIndex}}"
-									title="EveryMinutes" type="number" max="1440"
-									value="{{ or $growcontrol.Time.EveryMinutes "" }}">
-								<input onchange="changed(this);" name="Start-{{$index}}-{{$growcontrolIndex}}"
-									title="Start" type="time" value="{{$growcontrol.Time.Start}}">
-								<div style="background-color: #222;color: white;margin: 0px 10px 0px 10px;"> until
-								</div>
-								<input onchange="changed(this);" name="End-{{$index}}-{{$growcontrolIndex}}" title="End"
-									type="time" value="{{$growcontrol.Time.End}}">
-								<select onchange="changed(this);" title="Condition"
-									name="Value-{{$index}}-{{$growcontrolIndex}}">
-									{{range $growcontrol.GetValues}}
-									<option {{if eq . $growcontrol.Condition.Value}} selected {{end}} value="{{.}}">
-										{{.}}
-									</option>
-									{{end}}
-								</select>
-								<input onchange="changed(this);" title="SinceHours"
-									name="SinceHours-{{$index}}-{{$growcontrolIndex}}" type="number" min="0" max="24"
-									value="{{ or $growcontrol.Condition.SinceHours "" }}">
-								<select onchange="changed(this);" name="ComparisonSign-{{$index}}-{{$growcontrolIndex}}"
-									title="ComparisonSign">
-									<option value=""></option>
-									{{range $growcontrol.GetComparisonSigns}}
-									<option {{if eq . $growcontrol.Condition.ComparisonSign}} selected {{end}}
-										value="{{.}}">
-										{{.}}
-									</option>
-									{{end}}
-									<input onchange="changed(this);" name="ComparedTo-{{$index}}-{{$growcontrolIndex}}"
-										title="ComparedToValue" type="number" min="0" max="100"
-										value="{{ or $growcontrol.Condition.ComparedTo "" }}">
-									<button onclick="updateGrowcontrol('AddGrowcontrol', '{{$growcontrolIndex}}')"
-										title="Duplicate" class="saveHide">+</button>
+								{{range $actions}}
+								<option {{if eq . $growcontrol.Action}} selected {{end}} value="{{.}}">{{.}}
+								</option>
+								{{end}}
+							</select>
+							<input onchange="changed(this);" name="EveryMinutes-{{$index}}-{{$growcontrolIndex}}"
+								   title="EveryMinutes" type="number" max="1440"
+								   value="{{ or $growcontrol.Time.EveryMinutes "" }}">
+							<input onchange="changed(this);" name="Start-{{$index}}-{{$growcontrolIndex}}"
+								   title="Start" type="time" value="{{$growcontrol.Time.Start}}">
+							<div style="background-color: #222;color: white;margin: 0px 10px 0px 10px;"> until
 							</div>
-							{{end}}
+							<input onchange="changed(this);" name="End-{{$index}}-{{$growcontrolIndex}}" title="End"
+								   type="time" value="{{$growcontrol.Time.End}}">
+							<select onchange="changed(this);" title="Condition"
+									name="Value-{{$index}}-{{$growcontrolIndex}}">
+								{{range $growcontrol.GetValues}}
+								<option {{if eq . $growcontrol.Condition.Value}} selected {{end}} value="{{.}}">
+									{{.}}
+								</option>
+								{{end}}
+							</select>
+							<input onchange="changed(this);" title="SinceHours"
+								   name="SinceHours-{{$index}}-{{$growcontrolIndex}}" type="number" min="0" max="24"
+								   value="{{ or $growcontrol.Condition.SinceHours "" }}">
+							<select onchange="changed(this);" name="ComparisonSign-{{$index}}-{{$growcontrolIndex}}"
+									title="ComparisonSign">
+								<option value=""></option>
+								{{range $growcontrol.GetComparisonSigns}}
+								<option {{if eq . $growcontrol.Condition.ComparisonSign}} selected {{end}}
+										value="{{.}}">
+									{{.}}
+								</option>
+								{{end}}
+								<input onchange="changed(this);" name="ComparedTo-{{$index}}-{{$growcontrolIndex}}"
+									   title="ComparedToValue" type="number" min="0" max="100"
+									   value="{{ or $growcontrol.Condition.ComparedTo "" }}">
+								<button onclick="updateGrowcontrol('AddGrowcontrol', '{{$growcontrolIndex}}')"
+										title="Duplicate" class="saveHide">+</button>
 						</div>
+						{{end}}
 					</div>
 				</div>
-				{{end}}
-			</form>
-		</div>
+			</div>
+			{{end}}
+		</form>
 	</div>
+</div>
 
-	
-	<script>
+
+<script>
 
 		var images;
 		var lastImageId = 0;
@@ -461,7 +467,7 @@
 				return
 			}
 			// e.preventDefault();
-			//TODO: add image.next() and image.before() 
+			//TODO: add image.next() and image.before()
 			var beforeImage;
 			var nextImage = images[images.length - 1]
 			var loopCacheImage = images[0];
@@ -493,6 +499,7 @@
 
 
 		async function fullscreen(id, scrollTo) {
+			pic()
 			if (id === "" || id === null || !id > 2) {
 				return
 			}
@@ -557,6 +564,19 @@
 			document.getElementById('save').style.display = 'block';
 			Array.from(document.getElementsByClassName('saveHide')).forEach(e => e.style.display = 'none');
 		}
+		var allLoaded = false;
+		function pic() { //TODO: lazy load all pictures!!! from beginning
+			if (allLoaded){
+				return;
+			}
+			allLoaded = true;
+			Array.from(document.getElementsByClassName('picBox')).forEach(e =>
+				e.style.backgroundImage = 'url("/data/camera/' + e.attributes.bla.value + '.png")'
+			);
+			Array.from(document.getElementsByClassName('pic')).forEach(e =>
+				e.src = '/data/camera/' + e.attributes.bla.value + '.png'
+			);
+		}
 
 		function showWeek(index) {
 			if (!Number.isSafeInteger(index)) {
@@ -608,7 +628,7 @@
 				if (waitTime == 0) {
 					timeDiffMinutes = -99
 				}
-				waitTime = (timeDiffMinutes + 100) / (document.getElementById('movie_speed').value * 2)
+				waitTime = timeDiffMinutes / document.getElementById('movie_speed').value
 				await new Promise(r => setTimeout(r, waitTime));
 				fullscreen(image.id, true)
 				if (image.style.display === 'none') { //cancel on click anywhere
@@ -638,14 +658,14 @@
 	</script>
 
 
-	<!-- hidden images for lightbox -->
-	{{range .Measurements}}
-	{{if .Picture}}
-	<a class="lightbox" onclick="hide(this)" href="#!" id="{{.TimeInMinutes}}">
-		<span style="background-image: url('/data/camera/{{.TimeInMinutes}}.png');"></span>
-	</a>
-	{{end}}
-	{{end}}
+<!-- hidden images for lightbox -->
+{{range .Measurements}}
+{{if .Picture}}
+<a class="lightbox" onclick="hide(this)" href="#!" id="{{.TimeInMinutes}}">
+	<span class="picBox" bla="{{.TimeInMinutes}}"></span>
+</a>
+{{end}}
+{{end}}
 
 </body>
 

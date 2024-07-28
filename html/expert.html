@@ -78,7 +78,7 @@
 			<button type="submit"  onclick="window.location.href = '/'">Cancel & Back</button>
 			<hr>
 			<button id="save" onclick="save()">Save</button>
-			<button class="saveHide" id="switcher" type="button" onclick="switchJson()">Show Growtable</button>
+			<button class="saveHide" id="switcher" type="button" onclick="switchJson()">Show Growganizer</button>
 			<button id="pretty" type="button" onclick="prettyPrint()">Pretty Print</button>
 			<hr>
 			<select class="saveHide" id="plugControlCalibrate" onchange="calibrate(this,this.selectedIndex)">
@@ -188,10 +188,9 @@
 			.then(response => response.json())
 			.then(json => {
 				initPlugcontrol(json.PlugControls);
-				control.value = "rawUpdateGrowganizer"
 				growganizer = JSON.stringify(json, undefined, 4)
-				textarea.value = growganizer
-				prettyPrint()
+				// prettyPrint()
+				switchJson()
 			})
 			.catch(console.error);
 
@@ -202,6 +201,7 @@
 				const urlParams = new URLSearchParams(window.location.search);
 				const showTable = urlParams.get('table')
 				if (showTable == "true") {
+					document.getElementById("switcher").innerText = "Show Growtable"
 					switchJson()
 				}
 			})

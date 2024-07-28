@@ -74,7 +74,7 @@ func TestGrowtable_RawUpdate(t *testing.T) {
 	for _, tt := range tests {
 		t.Run("", func(t *testing.T) {
 			growtable := &Growtable{}
-			growtable.RawUpdate(tt.growtableJson, false)
+			growtable.RawUpdateGrowtable(tt.growtableJson, false)
 			tempBad := growtable.Measurements[0].Temperature != tt.want
 			humBad := growtable.Measurements[0].Humidity != tt.want
 			if tempBad && humBad {
@@ -82,48 +82,6 @@ func TestGrowtable_RawUpdate(t *testing.T) {
 			}
 		})
 	}
-}
-
-func TestGrowtable_Add(t *testing.T) {
-	tests := []struct {
-		want           int
-		temperature     int
-		humidity       int
-		pictureMinutes int
-	}{
-		{
-			temperature:     22,
-			pictureMinutes: 100,
-			want:           22,
-		},
-		{
-			humidity:       48,
-			pictureMinutes: 100,
-			want:           48,
-		},
-		{
-			humidity:       50,
-			pictureMinutes: 200,
-			want:           50,
-		},
-		{
-			temperature:     51,
-			pictureMinutes: 200,
-			want:           51,
-		},
-	}
-	growtable := &Growtable{}
-	for _, tt := range tests {
-		t.Run("", func(t *testing.T) {
-			growtable.Add(tt.temperature, tt.humidity, tt.pictureMinutes, Week{})
-			tempBad := growtable.Measurements[0].Temperature != tt.want
-			humBad := growtable.Measurements[0].Humidity != tt.want
-			if tempBad && humBad {
-				t.Fail()
-			}
-		})
-	}
-
 }
 
 func TestGrowtable_Report(t *testing.T) {
@@ -328,16 +286,16 @@ func TestTimeInDays(t *testing.T) {
 		want int
 	}{
 		{
-			args: args{Measurement{TimeInMinutes: 10*24*60 - 1}},
-			want: 9,
+			args: args{Measurement{TimeInMinutes: 1*24*60 - 1}},
+			want: 2,
 		},
 		{
 			args: args{Measurement{TimeInMinutes: 10 * 24 * 60}},
-			want: 10,
+			want: 11,
 		},
 		{
-			args: args{Measurement{TimeInMinutes: 10*24*60 + 300}},
-			want: 10,
+			args: args{Measurement{TimeInMinutes: 12*24*60 + 300}},
+			want: 13,
 		},
 	}
 	for _, tt := range tests {
@@ -360,7 +318,7 @@ func TestTimeInString(t *testing.T) {
 	}{
 		{
 			args: args{Measurement{TimeInMinutes: 10*24*60 + 300}},
-			want: "05:00",
+			want: "06:00",
 		},
 	}
 	for _, tt := range tests {

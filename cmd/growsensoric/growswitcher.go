@@ -53,7 +53,6 @@ func (g *Growswitcher) SwitchSim(plugOn growganizer.PlugControl, plugOff growgan
 		g.Switch(plugOn)
 		defer g.Switch(plugOff)
 		time.Sleep(time.Second * 55)
-		g.Switch(plugOff)
 	} else {
 		log.Println("simulate sim on")
 		time.Sleep(time.Second * 1)

@@ -104,7 +104,7 @@ func (g *Growmpage) growganizerToGrowtableWeeks() []growtable.Week {
 // these fields are used by growmpage.html (must be public, extending *Growmpage, TODO: add all here eg. TimeInDays):
 func (g *Growmpage) GetDaysSinceActiveStartDate() int {
 	if g.growganizer.Weeks[g.growganizer.ActiveWeekIndex].Start == "" {
-		return -1
+		return 0
 	}
 	days := growhelper.DaysSinceHtmlDate(g.growganizer.Weeks[g.growganizer.ActiveWeekIndex].Start)
 	return days

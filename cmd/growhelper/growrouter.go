@@ -23,6 +23,7 @@ const (
 	Filename_git_public_version_origin  = "../scripts/git_public_version_origin.sh"
 	Filename_github_public_install      = "../scripts/github_public_install.sh"
 	Filename_git_private_reset          = "../scripts/git_private_reset.sh"
+	Filename_git_private_backup          = "../scripts/git_private_backup.sh"
 	Filename_pictures                   = "../data/camera/"
 )
 

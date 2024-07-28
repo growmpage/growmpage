@@ -71,3 +71,11 @@ func GitPrivateReset(w http.ResponseWriter) {
 		fmt.Fprint(w, "updated from "+local+" to "+origin+", reloading growmpage...")
 	}
 }
+
+func GitPrivateBackup() {
+	command := exec.Command("/bin/bash", "-c", Filename_git_private_backup)
+		_, err := command.CombinedOutput()
+		if err != nil {
+			fmt.Println(err.Error())
+		}
+}

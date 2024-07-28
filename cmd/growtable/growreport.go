@@ -94,8 +94,8 @@ func getHslValue(value int, optimal int, maxDiff int) int { //0=red, 100=green
 	result = 100 - (diff * (100 / maxDiff))
 	return result
 }
-func (m Measurement) TimeInDays() int {
-	return growhelper.Days(m.TimeInMinutes)
+func (m Measurement) TimeInDays() int { //TODO: replace with TimeInString
+	return growhelper.Day(m.TimeInMinutes)
 }
 func (m Measurement) TimeInString() string {
 	return growhelper.Time(m.TimeInMinutes)
