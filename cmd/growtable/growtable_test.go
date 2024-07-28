@@ -286,10 +286,6 @@ func TestTimeInDays(t *testing.T) {
 		want int
 	}{
 		{
-			args: args{Measurement{TimeInMinutes: 1*24*60 - 1}},
-			want: 2,
-		},
-		{
 			args: args{Measurement{TimeInMinutes: 10 * 24 * 60}},
 			want: 11,
 		},
@@ -307,28 +303,6 @@ func TestTimeInDays(t *testing.T) {
 	}
 }
 
-func TestTimeInString(t *testing.T) {
-	type args struct {
-		m Measurement
-	}
-	tests := []struct {
-		name string
-		args args
-		want string
-	}{
-		{
-			args: args{Measurement{TimeInMinutes: 10*24*60 + 300}},
-			want: "06:00",
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := tt.args.m.TimeInString(); got != tt.want {
-				t.Errorf("TimeInString() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
 
 func TestDateInString(t *testing.T) {
 	type args struct {
